@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+D:/Qt/reconstructme-qt/inc/moc_types.cpp
+D:/Qt/reconstructme-qt/inc/types.h

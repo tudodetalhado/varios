@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{13853919-b75d-4db0-96e7-cdc57da28d87}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{287c5887-edb4-4343-83f0-7ba6fdd0f968}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\src\KinectViewer\KinectViewer.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\KinectViewer\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\KinectViewer\MainWindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\src\resources\icons\play_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\icons\stop_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\icons\rec_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\icons\power_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\icons\screenshot_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\icons\open_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\icons\save_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\icons\delete_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\icons\info_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\icons\help_48x48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\src\resources\images\cube.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\resources\shaders\color.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\resources\shaders\color.frag">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\qrc_KinectViewer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\KinectViewer\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainWindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\KinectViewer\KinectViewerMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_MainWindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,61 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include <chrono>
+#include <strsafe.h>
+#include <fstream>
+#include <thread>
+#include <mutex>
+#include "stdafx.h"
+#include "Utils.h"
+#include "KinectSensor.h"
+#include "FrameFileWriterReader.h"
+#include "Calibration.h"
+
+namespace Ui {
+class MainWindow;
+}
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+private:
+    Ui::MainWindow *ui;
+    void UpdateFrame();
+    void ProcessDepth(const UINT16* pBuffer, int nWidth, int nHeight);
+    void ProcessColor(RGB* pBuffer, int nWidth, int nHeight);
+    void StoreFrame(Point3f *vertices, Point2f *mapping, RGB *color, std::vector<Body> &bodies, BYTE* bodyIndex);
+    void ShowFPS();
+
+    KinectSensor *pCapture;
+    Point3f* m_pCameraSpaceCoordinates;
+    Point2f* m_pColorCoordinatesOfDepth;
+    Point2f* m_pDepthCoordinatesOfColor;
+    FrameFileWriterReader m_framesFileWriterReader;
+    std::vector<Point3s> m_vLastFrameVertices;
+    std::vector<RGB> m_vLastFrameRGB;
+    std::vector<Body> m_vLastFrameBody;
+    Calibration calibration;
+    std::vector<float> m_vBounds;
+
+    bool m_bCaptureFrame;
+    bool m_bConfirmCaptured;
+    bool m_bCalibrate;
+    bool m_bConfirmCalibrated;
+    bool m_bShowDepth;
+    bool m_bStreamOnlyBodies;
+    bool m_bFilter;
+
+    int m_nFilterNeighbors;
+    float m_fFilterThreshold;
+
+    RGB* m_pDepthRGBX;
+};
+
+#endif // MAINWINDOW_H

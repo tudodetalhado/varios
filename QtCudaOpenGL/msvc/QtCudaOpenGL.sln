@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CudaKernels", "CudaKernels.vcxproj", "{835E1B3C-B685-4290-8C71-0F36F3E1D3BD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtCudaOpenGL", "QtCudaOpenGL.vcxproj", "{5D2195C7-BCFD-4207-B003-5B852F9A61E0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtCudaTexture", "QtCudaTexture.vcxproj", "{90794E12-8F08-4363-9333-F34291ADB2BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RaycastBox", "RaycastBox.vcxproj", "{2FABBB48-FB5B-4D2D-BEA4-85E21C70E9DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{835E1B3C-B685-4290-8C71-0F36F3E1D3BD}.Debug|x64.ActiveCfg = Debug|x64
+		{835E1B3C-B685-4290-8C71-0F36F3E1D3BD}.Debug|x64.Build.0 = Debug|x64
+		{835E1B3C-B685-4290-8C71-0F36F3E1D3BD}.Release|x64.ActiveCfg = Release|x64
+		{835E1B3C-B685-4290-8C71-0F36F3E1D3BD}.Release|x64.Build.0 = Release|x64
+		{5D2195C7-BCFD-4207-B003-5B852F9A61E0}.Debug|x64.ActiveCfg = Debug|x64
+		{5D2195C7-BCFD-4207-B003-5B852F9A61E0}.Debug|x64.Build.0 = Debug|x64
+		{5D2195C7-BCFD-4207-B003-5B852F9A61E0}.Release|x64.ActiveCfg = Release|x64
+		{5D2195C7-BCFD-4207-B003-5B852F9A61E0}.Release|x64.Build.0 = Release|x64
+		{90794E12-8F08-4363-9333-F34291ADB2BB}.Debug|x64.ActiveCfg = Debug|x64
+		{90794E12-8F08-4363-9333-F34291ADB2BB}.Debug|x64.Build.0 = Debug|x64
+		{90794E12-8F08-4363-9333-F34291ADB2BB}.Release|x64.ActiveCfg = Release|x64
+		{90794E12-8F08-4363-9333-F34291ADB2BB}.Release|x64.Build.0 = Release|x64
+		{2FABBB48-FB5B-4D2D-BEA4-85E21C70E9DC}.Debug|x64.ActiveCfg = Debug|x64
+		{2FABBB48-FB5B-4D2D-BEA4-85E21C70E9DC}.Debug|x64.Build.0 = Debug|x64
+		{2FABBB48-FB5B-4D2D-BEA4-85E21C70E9DC}.Release|x64.ActiveCfg = Release|x64
+		{2FABBB48-FB5B-4D2D-BEA4-85E21C70E9DC}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

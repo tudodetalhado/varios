@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+D:/Qt/reconstructme-qt/inc/moc_status_dialog.cpp
+D:/Qt/reconstructme-qt/inc/status_dialog.h

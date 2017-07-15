@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="org.bytedeco.javacv"
+		module="javacv-caller"
+		revision="working"
+		conf="default"
+		confs="default"
+		date="20170413221330"/>
+	<dependencies>
+		<module organisation="org.bytedeco.javacv" name="javacv">
+			<revision name="1.1" status="release" pubdate="20170413221331" resolver="public-remote" artresolver="public-remote" downloaded="true" searched="true" default="false" conf="x86.64.windows, runtime" position="0">
+				<metadata-artifact status="successful" details="" size="1642" time="533" location="D:\Qt\myrobotlab\repo\org.bytedeco.javacv\javacv\ivy-1.1.xml" searched="true" original-local-location="D:\Qt\myrobotlab\repo\org.bytedeco.javacv\javacv\ivy-1.1.xml.original" origin-is-local="false" origin-location="https://raw.githubusercontent.com/MyRobotLab/repo/master/org.bytedeco.javacv/1.1/ivy.xml"/>
+				<caller organisation="org.bytedeco.javacv" name="javacv-caller" conf="default" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="working"/>
+				<artifacts>
+					<artifact name="opencv-windows-x86_64" type="jar" ext="jar" status="successful" details="" size="8818573" time="5953" location="D:\Qt\myrobotlab\repo\org.bytedeco.javacv\javacv\jars\opencv-windows-x86_64-1.1.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/org.bytedeco.javacv/1.1/opencv-windows-x86_64.jar"/>
+					</artifact>
+					<artifact name="opencv" type="jar" ext="jar" status="successful" details="" size="616138" time="1376" location="D:\Qt\myrobotlab\repo\org.bytedeco.javacv\javacv\jars\opencv-1.1.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/org.bytedeco.javacv/1.1/opencv.jar"/>
+					</artifact>
+					<artifact name="videoinput" type="jar" ext="jar" status="successful" details="" size="15433" time="1117" location="D:\Qt\myrobotlab\repo\org.bytedeco.javacv\javacv\jars\videoinput-1.1.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/org.bytedeco.javacv/1.1/videoinput.jar"/>
+					</artifact>
+					<artifact name="javacpp" type="jar" ext="jar" status="successful" details="" size="252324" time="969" location="D:\Qt\myrobotlab\repo\org.bytedeco.javacv\javacv\jars\javacpp-1.1.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/org.bytedeco.javacv/1.1/javacpp.jar"/>
+					</artifact>
+					<artifact name="videoinput-windows-x86_64" type="jar" ext="jar" status="successful" details="" size="45014" time="834" location="D:\Qt\myrobotlab\repo\org.bytedeco.javacv\javacv\jars\videoinput-windows-x86_64-1.1.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/org.bytedeco.javacv/1.1/videoinput-windows-x86_64.jar"/>
+					</artifact>
+					<artifact name="data.2.4.10" type="zip" ext="zip" status="successful" details="" size="2377600" time="3485" location="D:\Qt\myrobotlab\repo\org.bytedeco.javacv\javacv\zips\data.2.4.10-1.1.zip">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/org.bytedeco.javacv/1.1/data.2.4.10.zip"/>
+					</artifact>
+					<artifact name="javacv" type="jar" ext="jar" status="successful" details="" size="366327" time="1271" location="D:\Qt\myrobotlab\repo\org.bytedeco.javacv\javacv\jars\javacv-1.1.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/org.bytedeco.javacv/1.1/javacv.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

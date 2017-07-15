@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="pl.sarxos.webcam"
+		module="webcam-caller"
+		revision="working"
+		conf="default"
+		confs="default"
+		date="20170413221321"/>
+	<dependencies>
+		<module organisation="pl.sarxos.webcam" name="webcam">
+			<revision name="0.3.10" status="release" pubdate="20170413221325" resolver="public-remote" artresolver="public-remote" downloaded="true" searched="true" default="false" conf="x86.64.windows, runtime" position="0">
+				<metadata-artifact status="successful" details="" size="532" time="578" location="D:\Qt\myrobotlab\repo\pl.sarxos.webcam\webcam\ivy-0.3.10.xml" searched="true" original-local-location="D:\Qt\myrobotlab\repo\pl.sarxos.webcam\webcam\ivy-0.3.10.xml.original" origin-is-local="false" origin-location="https://raw.githubusercontent.com/MyRobotLab/repo/master/pl.sarxos.webcam/0.3.10/ivy.xml"/>
+				<caller organisation="pl.sarxos.webcam" name="webcam-caller" conf="default" rev="0.3.10" rev-constraint-default="0.3.10" rev-constraint-dynamic="0.3.10" callerrev="working"/>
+				<artifacts>
+					<artifact name="sosia" type="jar" ext="jar" status="successful" details="" size="43941" time="1472" location="D:\Qt\myrobotlab\repo\pl.sarxos.webcam\webcam\jars\sosia-0.3.10.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/pl.sarxos.webcam/0.3.10/sosia.jar"/>
+					</artifact>
+					<artifact name="bridj-0.6.2" type="jar" ext="jar" status="successful" details="" size="878674" time="1957" location="D:\Qt\myrobotlab\repo\pl.sarxos.webcam\webcam\jars\bridj-0.6.2-0.3.10.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/pl.sarxos.webcam/0.3.10/bridj-0.6.2.jar"/>
+					</artifact>
+					<artifact name="webcam-capture-0.3.10" type="jar" ext="jar" status="successful" details="" size="409084" time="910" location="D:\Qt\myrobotlab\repo\pl.sarxos.webcam\webcam\jars\webcam-capture-0.3.10-0.3.10.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/pl.sarxos.webcam/0.3.10/webcam-capture-0.3.10.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

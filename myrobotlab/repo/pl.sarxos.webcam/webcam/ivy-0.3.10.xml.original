@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module version="2.0">
+    <info organisation="pl.sarxos.webcam" module="webcam" status="release" revision="0.3.10">
+    </info>
+    <configurations>
+        <include url="https://raw.githubusercontent.com/MyRobotLab/repo/develop/ivyconfigurations.xml"/>
+    </configurations>
+    <publications>
+        <artifact name="sosia" type="jar"/>
+        <artifact name="webcam-capture-0.3.10" type="jar"/>
+        <artifact name="bridj-0.6.2" type="jar"/>
+    </publications>
+</ivy-module>

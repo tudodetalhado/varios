@@ -1,0 +1,7 @@
+ofxKinect
+ofxOpenCv
+ofxXmlSettings
+ofxCv
+ofxDatGui
+ofxModal
+ofxParagraph

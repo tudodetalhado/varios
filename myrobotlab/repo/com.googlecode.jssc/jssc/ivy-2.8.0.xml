@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+    <info organisation="com.googlecode.jssc" module="jssc" revision="2.8.0" status="release" publication="20170413221347">
+    </info>
+    <configurations>
+        <conf name="public"/>
+		<conf name="runtime"/>
+		<conf name="armv6.hfp.32.linux"/>
+		<conf name="armv7.hfp.32.linux"/>
+		<conf name="armv7.32.linux"/>
+		<conf name="armv8.64.linux"/>
+		<conf name="armv7.hfp.32.linux"/>
+		<conf name="x86.32.linux"/>
+		<conf name="x86.64.linux"/>
+		<conf name="x86.32.mac"/>
+		<conf name="x86.64.mac"/>
+		<conf name="x86.32.windows"/>
+		<conf name="x86.64.windows"/>
+    </configurations>
+    <publications>
+        <artifact name="jssc-2.8.0" type="jar"/>
+    </publications>
+</ivy-module>

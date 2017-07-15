@@ -1,0 +1,34 @@
+{
+  "undockDisplay": false,
+  "capturing": false,
+  "streamerEnabled": true,
+  "serviceType": {
+    "name": "org.myrobotlab.service.OpenCV",
+    "description": "OpenCV (computer vision) service wrapping many of the functions and filters of OpenCV",
+    "ready": false,
+    "available": true,
+    "dependencies": [
+      "pl.sarxos.webcam/0.3.10",
+      "org.bytedeco.javacv/1.1"
+    ],
+    "categories": [
+      "vision",
+      "sensor",
+      "video"
+    ],
+    "peers": {
+      "streamer": {
+        "key": "streamer",
+        "actualName": "streamer",
+        "fullTypeName": "org.myrobotlab.service.VideoStreamer",
+        "comment": "Shared Video Streamer",
+        "isRoot": false
+      }
+    }
+  },
+  "name": "opencv",
+  "simpleName": "OpenCV",
+  "serviceClass": "org.myrobotlab.service.OpenCV",
+  "isRunning": true,
+  "allowDisplay": true
+}

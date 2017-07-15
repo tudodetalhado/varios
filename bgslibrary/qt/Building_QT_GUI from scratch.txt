@@ -1,0 +1,32 @@
+Building QT GUI from scratch
+https://github.com/andrewssobral/bgslibrary/wiki/Graphical-User-Interface:-QT
+
+Dependencies:
+
+OpenCV 2.x or 3.x (Tested with OpenCV 3.2.0)
+Qt 5 library (Tested with Qt 5.6.2)
+On Windows (with CMAKE and Visual Studio 2015 x64)
+
+1. Click on 'Qt 5.6 64-bit for Desktop (MSVC 2015)'
+
+2. Go to bgslibrary/gui_qt/build folder.
+
+3. Set your OpenCV PATH:
+ 
+   set OpenCV_DIR=C:\OpenCV3.2.0\build
+
+4. Launch CMAKE:
+
+   cmake -DOpenCV_DIR=%OpenCV_DIR% -G "Visual Studio 14 Win64" ..
+
+5. Include OpenCV binaries in the system path:
+
+   set PATH=%PATH%;%OpenCV_DIR%\x64\vc14\bin
+
+6. Open the bgslibrary_gui.sln file in your Visual Studio and switch to 'RELEASE' mode
+
+7. Click on 'ALL_BUILD' project and build!
+
+8. Go to bgslibrary/gui_qt/build/Release and copy bgslibrary_gui.exe to bgslibrary/.
+
+9. Run bgslibrary_gui.exe and enjoy! ;-)

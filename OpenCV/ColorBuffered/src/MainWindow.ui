@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>609</width>
+    <height>453</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="lblCapturar">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>17</y>
+      <width>573</width>
+      <height>349</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCapturar">
+    <property name="geometry">
+     <rect>
+      <x>27</x>
+      <y>387</y>
+      <width>111</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Capturar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnParar">
+    <property name="geometry">
+     <rect>
+      <x>156</x>
+      <y>386</y>
+      <width>111</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Parar</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

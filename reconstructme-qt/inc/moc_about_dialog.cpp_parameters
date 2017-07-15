@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+D:/Qt/reconstructme-qt/inc/moc_about_dialog.cpp
+D:/Qt/reconstructme-qt/inc/about_dialog.h

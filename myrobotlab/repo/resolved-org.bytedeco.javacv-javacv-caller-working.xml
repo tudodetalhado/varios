@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+	<info organisation="org.bytedeco.javacv" module="javacv-caller" revision="working" status="release" publication="20170413221330" default="true"/>
+	<configurations>
+		<conf name="default" visibility="public"/>
+	</configurations>
+	<publications>
+		<artifact name="javacv-caller" type="jar" ext="jar" conf="default"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.bytedeco.javacv" name="javacv" rev="1.1" conf="default->runtime,x86.64.windows"/>
+	</dependencies>
+</ivy-module>

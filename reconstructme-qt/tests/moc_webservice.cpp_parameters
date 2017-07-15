@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+D:/Qt/reconstructme-qt/tests/moc_webservice.cpp
+D:/Qt/reconstructme-qt/tests/webservice.hpp

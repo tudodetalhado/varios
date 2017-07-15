@@ -1,0 +1,21 @@
+{
+  "libraries": {
+    "com.googlecode.jssc/2.8.0": {
+      "org": "com.googlecode.jssc",
+      "revision": "2.8.0",
+      "installed": true
+    },
+    "org.bytedeco.javacv/1.1": {
+      "org": "org.bytedeco.javacv",
+      "revision": "1.1",
+      "installed": true
+    },
+    "pl.sarxos.webcam/0.3.10": {
+      "org": "pl.sarxos.webcam",
+      "revision": "0.3.10",
+      "installed": true
+    }
+  },
+  "REPO_DIR": "repo",
+  "errors": []
+}

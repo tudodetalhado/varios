@@ -1,0 +1,19 @@
+{
+  "serviceType": {
+    "name": "org.myrobotlab.service.Agent",
+    "description": "Agent - responsible for creating the environment and maintaining, tracking and terminating all processes",
+    "sponsor": "GroG",
+    "ready": false,
+    "available": true,
+    "dependencies": [],
+    "categories": [
+      "framework"
+    ],
+    "peers": {}
+  },
+  "name": "agent",
+  "simpleName": "Agent",
+  "serviceClass": "org.myrobotlab.service.Agent",
+  "isRunning": false,
+  "allowDisplay": true
+}

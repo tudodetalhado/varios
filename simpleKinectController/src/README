@@ -1,0 +1,11 @@
+This is an very simple GUI on which the user will be able to set the Kinect height and look through its camera.
+Multi-Kinect will be supported
+OpenGL will be used to render the images.
+
+Created with Qt 5.0.1 and Microsoft Kinect SDK
+
+Ideas(from the dev, to the dev): Make a KinectManager, which contains two maps. The first map conatins a key and a pointer to an INUISensor, the second map contains the same key and a QString. 
+The QString indicates possible errors, so the end-user can see them.
+
+Also: all comminucation will go trough this manager. The main will connect the signals and slots from the mainWindow to the s&s of the KinectManager, and the KinectManager will connect those signals and slots to the KinectObject
+if one is chosen. The Window will get only the first map, so the window does not even know what a Kinect is. Because of the keys the manager knows what Kinect the GUI is talking about and if possible it will activate this Kinect.

@@ -1,0 +1,22 @@
+{
+  "history": [],
+  "cwd": "/",
+  "prompt": "#",
+  "attached": "runtime",
+  "serviceType": {
+    "name": "org.myrobotlab.service.Cli",
+    "description": "command line interpreter interface",
+    "ready": false,
+    "available": true,
+    "dependencies": [],
+    "categories": [
+      "framework"
+    ],
+    "peers": {}
+  },
+  "name": "cli",
+  "simpleName": "Cli",
+  "serviceClass": "org.myrobotlab.service.Cli",
+  "isRunning": false,
+  "allowDisplay": true
+}

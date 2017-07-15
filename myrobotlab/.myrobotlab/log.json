@@ -1,0 +1,30 @@
+{
+  "publishLogEventNotifyList": {
+    "publishLogEvent": [
+      {
+        "topicMethod": "publishLogEvent",
+        "callbackName": "webgui",
+        "callbackMethod": "onLogEvent",
+        "_hashCode": 0
+      }
+    ]
+  },
+  "isLogging": true,
+  "logLevel": "info",
+  "serviceType": {
+    "name": "org.myrobotlab.service.Log",
+    "description": "Logging Service helpful in diagnostics",
+    "ready": false,
+    "available": true,
+    "dependencies": [],
+    "categories": [
+      "famework"
+    ],
+    "peers": {}
+  },
+  "name": "log",
+  "simpleName": "Log",
+  "serviceClass": "org.myrobotlab.service.Log",
+  "isRunning": false,
+  "allowDisplay": true
+}

@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+D:/Qt/reconstructme-qt/inc/moc_settings.cpp
+D:/Qt/reconstructme-qt/inc/settings.h

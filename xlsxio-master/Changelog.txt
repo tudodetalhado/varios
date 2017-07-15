@@ -1,0 +1,171 @@
+0.2.8
+
+2016-10-24  Brecht Sanders  https://github.com/brechtsanders/
+
+  * skip issue where "(null)" is written if cell data is NULL
+  * limit sheet name to 31 characters
+
+0.2.7
+
+2016-09-03  Brecht Sanders  https://github.com/brechtsanders/
+
+  * skip phonetic data in <rPh> tag also in shared strings
+
+0.2.6
+
+2016-08-31  Brecht Sanders  https://github.com/brechtsanders/
+
+  * skip phonetic data in <rPh> tag (often used in Asian spreadsheets)
+
+0.2.5
+
+2016-06-28  Brecht Sanders  https://github.com/brechtsanders/
+
+  * fix reading data from cells with mixed formatting (thanks to bcTekGuy)
+
+2016-06-16  Brecht Sanders  https://github.com/brechtsanders/
+
+  * use correct formula for calculating column widths
+  * add -d parameter to xlsxio_csv2xlsx
+
+0.2.4
+
+2016-05-12  Brecht Sanders  https://github.com/brechtsanders/
+
+  * fixed crash in xlsxioread_sheetlist_close() when parameter is NULL
+
+0.2.3
+
+2016-05-11  Brecht Sanders  https://github.com/brechtsanders/
+
+  * fixed CMake build to use proper static/shared defines
+  * reintriduce DLL_EXPORT_XLSXIO in .c files except for Visual C
+
+0.2.2
+
+2016-05-07  Brecht Sanders  https://github.com/brechtsanders/
+
+  * fixed some compiler warnings
+  * only use DLL_EXPORT_XLSXIO in .h files (removed from .c files)
+
+0.2.1
+
+2016-05-05  Brecht Sanders  https://github.com/brechtsanders/
+
+  * added CMake BUILD_DOCUMENTATION option (defaults to ON if Doxygen is detected)
+  * workaround for missing stdint.h/unistd.h on Visual C 
+  * removed -pthread when building for Apple
+  * released Windows binaries (32-bit and 64-bit)
+
+0.2.0
+
+2016-04-28  Brecht Sanders  https://github.com/brechtsanders/
+
+  * added CMake support and tested on multiple platforms:
+      + Windows 10 with MinGW compiler using MSYS shell
+      + Debian Linux 8.4
+      + OS X 10.11.3
+
+2016-04-25  Brecht Sanders  https://github.com/brechtsanders/
+
+  * added lastModifiedBy property (set to "libxlsxio_write <version>")
+
+2016-04-16  Brecht Sanders  https://github.com/brechtsanders/
+
+  * example C++ classes: XLSXIOWriter, XLSXIOReader, XLSXIOReaderSheet
+
+2016-04-11  Brecht Sanders  https://github.com/brechtsanders/
+
+  * added more comments in example files
+  * renamed the following for better naming consistency:
+      + XLSXIO_READ_NAME to XLSXIOREAD_NAME
+      + XLSXIO_READ_FULLNAME to XLSXIOREAD_FULLNAME
+      + XLSXIO_WRITE_NAME to XLSXIOWRITE_NAME
+      + XLSXIO_WRITE_FULLNAME to XLSXIOWRITE_FULLNAME
+  * added support to xlsxio_csv2xlsx to use - as standard input
+
+0.1.9
+
+2016-04-10  Brecht Sanders  https://github.com/brechtsanders/
+
+  * added xlsxio_csv2xlsx command line utility
+  * fixed warning in xlsxio_xlsx2csv when compiling with clang
+
+0.1.8
+
+2016-04-07  Brecht Sanders  https://github.com/brechtsanders/
+
+  * fixed issue with callback data pointer in row callback function
+  * added xlsxio_xlsx2csv command line utility
+
+0.1.7
+
+2016-03-28  Brecht Sanders  https://github.com/brechtsanders/
+
+  * changed integer type to int64_t in xlsxiowrite_add_cell_int() and xlsxioread_sheet_next_cell_int()
+
+0.1.6
+
+2016-03-24  Brecht Sanders  https://github.com/brechtsanders/
+
+  * delete destination file before writing to it
+  * fixed corruption issue when closing if no rows were written
+
+0.1.5
+
+2016-03-20  Brecht Sanders  https://github.com/brechtsanders/
+
+  * fixed issue with detecting witdh of columns with NULL data
+  * changed witdh detection to only count first line of multiline data
+  * fixed issue with inserting empty rows
+  * only freezes top row when columns were specified
+
+0.1.4
+
+2016-03-19  Brecht Sanders  https://github.com/brechtsanders/
+
+  * optimized code for writing cell data
+  * added witdh parameter to xlsxiowrite_add_column()
+  * added column witdh detection and xlsxiowrite_set_detection_rows()
+  * added xlsxiowrite_set_row_height()
+
+0.1.3
+
+2016-03-17  Brecht Sanders  https://github.com/brechtsanders/
+
+  * now reading ignores hidden rows
+  * added support for writing column names: xlsxiowrite_add_column()
+  * simplified xlsxio_write.c by using FILE* handles
+  * added sheetname parameter to xlsxiowrite_open()
+
+0.1.2
+
+2016-03-15  Brecht Sanders  https://github.com/brechtsanders/
+
+	* added xlsxioread_sheetlist_ functions for getting worksheet names
+	* fixed Excel error: "That command cannot be used on multiple selections"
+	* use simpler folder structure inside .xlsx file
+
+0.1.1
+
+2016-03-13  Brecht Sanders  https://github.com/brechtsanders/
+
+	* added header file with version information
+	* additional functions for reading cells (integer, floating point, date/time)
+
+2016-03-12  Brecht Sanders  https://github.com/brechtsanders/
+
+	* add support multiline text fields
+	* set date/time value to proper display format
+
+2016-03-09  Brecht Sanders  https://github.com/brechtsanders/
+
+	* add support for reading next row without having read all columns
+	* additional functions for writing cells (integer, floating point, date/time)
+	* added encoding of special XML characters in string data
+
+0.1.0
+
+2016-03-08  Brecht Sanders  https://github.com/brechtsanders/
+
+	* initial release of working version

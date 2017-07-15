@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+D:/Qt/reconstructme-qt/inc/moc_osg_viewer_qt.cpp
+D:/Qt/reconstructme-qt/inc/osg_viewer_qt.h

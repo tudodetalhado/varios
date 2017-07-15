@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module version="2.0">
+	<!-- TODO the org is wrong now.. -->
+	<info organisation="org.bytedeco.javacv" module="javacv" status="release"
+		revision="1.1">
+	</info>
+	<configurations>
+		<include
+			url="https://raw.githubusercontent.com/MyRobotLab/repo/develop/ivyconfigurations.xml" />
+	</configurations>
+	<publications>
+
+		<artifact name="data.2.4.10" type="zip" ext="zip" conf="*" />
+
+		<!-- universal jars -->
+		<artifact name="javacpp" type="jar" conf="*" />
+		<artifact name="javacv" type="jar" conf="*" />
+		<artifact name="opencv" type="jar" conf="*" />
+		<artifact name="videoinput" type="jar" conf="*" />
+		<!-- native jars -->
+
+		<!-- opencv-android-x86.jar ??? -->
+
+		<artifact name="opencv-linux-arm" type="jar" conf="armv7.hfp.32.linux" />
+		<artifact name="opencv-linux-arm" type="jar" conf="armv6.hfp.32.linux" />
+		<artifact name="opencv-windows-x86" type="jar" conf="x86.32.windows" />
+		<artifact name="opencv-windows-x86_64" type="jar" conf="x86.64.windows" />
+		<artifact name="opencv-linux-x86" type="jar" conf="x86.32.linux" />
+		<artifact name="opencv-linux-x86_64" type="jar" conf="x86.64.linux" />
+		<artifact name="opencv-macosx-x86_64" type="jar" conf="x86.64.mac" />
+
+		<artifact name="videoinput-windows-x86" type="jar" conf="x86.32.windows" />
+		<artifact name="videoinput-windows-x86_64" type="jar" conf="x86.64.windows" />
+
+		<!-- TODO: what is the platform for android??? <artifact name="opencv-android-x86" 
+			type="jar" conf="x86.hfp.32.linux"/> <artifact name="opencv-android-arm" 
+			type="jar" conf="armv6.hfp.32.linux"/> -->
+	</publications>
+</ivy-module>

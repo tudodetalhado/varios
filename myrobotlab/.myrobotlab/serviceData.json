@@ -1,0 +1,2997 @@
+{
+  "serviceTypes": {
+    "org.myrobotlab.service.AcapelaSpeech": {
+      "name": "org.myrobotlab.service.AcapelaSpeech",
+      "description": "Acapela group speech synthesis service.",
+      "sponsor": "GroG",
+      "ready": false,
+      "available": true,
+      "todo": "test speak blocking - also what is the return type and AudioFile audio track id ?",
+      "dependencies": [
+        "org.apache.commons.httpclient/4.5.2"
+      ],
+      "categories": [
+        "speech"
+      ],
+      "peers": {
+        "audioFile": {
+          "key": "audioFile",
+          "actualName": "audioFile",
+          "fullTypeName": "org.myrobotlab.service.AudioFile",
+          "comment": "audioFile",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Adafruit16CServoDriver": {
+      "name": "org.myrobotlab.service.Adafruit16CServoDriver",
+      "description": "Adafruit 16-Channel PWM/Servo Driver",
+      "sponsor": "Mats",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "shield",
+        "servo & pwm"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.AdafruitIna219": {
+      "name": "org.myrobotlab.service.AdafruitIna219",
+      "description": "Adafruit INA219 Voltage and Current sensor Service",
+      "sponsor": "Mats",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "shield",
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.AdafruitMotorShield": {
+      "name": "org.myrobotlab.service.AdafruitMotorShield",
+      "description": "Adafruit Motor Shield Service",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "motor",
+        "shield"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "our Arduino",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Ads1115": {
+      "name": "org.myrobotlab.service.Ads1115",
+      "description": "Adafruit ADS1115 AD Converter",
+      "sponsor": "Mats",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "shield",
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Agent": {
+      "name": "org.myrobotlab.service.Agent",
+      "description": "Agent - responsible for creating the environment and maintaining, tracking and terminating all processes",
+      "sponsor": "GroG",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "framework"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Android": {
+      "name": "org.myrobotlab.service.Android",
+      "description": "Android service to accumulate all sensor data",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.AndroidSpeechRecognition": {
+      "name": "org.myrobotlab.service.AndroidSpeechRecognition",
+      "description": "utilizing Android's Speech Recognition",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "speech recognition"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Arduino": {
+      "name": "org.myrobotlab.service.Arduino",
+      "description": "This service interfaces with an Arduino micro-controller",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "microcontroller"
+      ],
+      "peers": {
+        "serial": {
+          "key": "serial",
+          "actualName": "serial",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "serial device for this Arduino",
+          "isRoot": false
+        },
+        "virtual": {
+          "key": "virtual",
+          "actualName": "virtual",
+          "fullTypeName": "org.myrobotlab.service.VirtualDevice",
+          "comment": "used to create virtual arduino",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Arm": {
+      "name": "org.myrobotlab.service.Arm",
+      "description": "robot arm service",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.AudioCapture": {
+      "name": "org.myrobotlab.service.AudioCapture",
+      "description": "captures and stores audio from microphone",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "sound"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.AudioFile": {
+      "name": "org.myrobotlab.service.AudioFile",
+      "description": "Plays back audio file. Can block or multi-thread play",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.tritonus.share.sampled.floatsamplebuffer/0.3.6",
+        "javazoom.jl.player/1.0.1",
+        "javazoom.spi/1.9.5"
+      ],
+      "categories": [
+        "sound"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.AzureTranslator": {
+      "name": "org.myrobotlab.service.AzureTranslator",
+      "description": "interface to Azure translation services",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "com.azure.translator/0.6.2"
+      ],
+      "categories": [
+        "cloud",
+        "ai",
+        "translation"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.BeagleBoardBlack": {
+      "name": "org.myrobotlab.service.BeagleBoardBlack",
+      "description": "service to access the beagle board black hardware",
+      "ready": false,
+      "available": false,
+      "dependencies": [],
+      "categories": [
+        "microcontroller"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Blender": {
+      "name": "org.myrobotlab.service.Blender",
+      "description": "interfaces Blender for simulation and display",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "simulator",
+        "display"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Blocks": {
+      "name": "org.myrobotlab.service.Blocks",
+      "description": "basic block programming interface",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "programming"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Bno055": {
+      "name": "org.myrobotlab.service.Bno055",
+      "description": "General BNO055 acclerometer and gyro",
+      "sponsor": "Christian",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "microcontroller",
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.BoofCv": {
+      "name": "org.myrobotlab.service.BoofCv",
+      "description": "used as a general template",
+      "ready": false,
+      "available": false,
+      "dependencies": [
+        "pl.sarxos.webcam/0.3.10",
+        "net.sourceforge.boofcv/0.23"
+      ],
+      "categories": [
+        "general"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.CSVConnector": {
+      "name": "org.myrobotlab.service.CSVConnector",
+      "description": "This service crawls a csv file and publishes each row as a document",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "ingest"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Chassis": {
+      "name": "org.myrobotlab.service.Chassis",
+      "description": "control platform",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "general"
+      ],
+      "peers": {
+        "controller": {
+          "key": "controller",
+          "actualName": "controller",
+          "fullTypeName": "org.myrobotlab.service.Sabertooth",
+          "comment": "serial controller",
+          "isRoot": false
+        },
+        "joystick": {
+          "key": "joystick",
+          "actualName": "joystick",
+          "fullTypeName": "org.myrobotlab.service.Joystick",
+          "comment": "joystick control",
+          "isRoot": false
+        },
+        "left": {
+          "key": "left",
+          "actualName": "left",
+          "fullTypeName": "org.myrobotlab.service.Motor",
+          "comment": "left drive motor",
+          "isRoot": false
+        },
+        "right": {
+          "key": "right",
+          "actualName": "right",
+          "fullTypeName": "org.myrobotlab.service.Motor",
+          "comment": "right drive motor",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.ChessGame": {
+      "name": "org.myrobotlab.service.ChessGame",
+      "description": "interface to a Chess game",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.op.chess/1.0.0"
+      ],
+      "categories": [
+        "game"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.ChessGameManager": {
+      "name": "org.myrobotlab.service.ChessGameManager",
+      "description": "manages multiple interfaces for a chess game",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "game"
+      ],
+      "peers": {
+        "serial": {
+          "key": "serial",
+          "actualName": "serial",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "serial",
+          "isRoot": false
+        },
+        "speech": {
+          "key": "speech",
+          "actualName": "speech",
+          "fullTypeName": "org.myrobotlab.service.AcapelaSpeech",
+          "comment": "speech",
+          "isRoot": false
+        },
+        "webgui": {
+          "key": "webgui",
+          "actualName": "webgui",
+          "fullTypeName": "org.myrobotlab.service.WebGui",
+          "comment": "webgui",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.CleverBot": {
+      "name": "org.myrobotlab.service.CleverBot",
+      "description": "chatbot service",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "com.googlecode.chatterbot/1.2.1"
+      ],
+      "categories": [
+        "intellegence"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Cli": {
+      "name": "org.myrobotlab.service.Cli",
+      "description": "command line interpreter interface",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "framework"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Clock": {
+      "name": "org.myrobotlab.service.Clock",
+      "description": "used to generate pulses and recurring messages",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "scheduling"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Cron": {
+      "name": "org.myrobotlab.service.Cron",
+      "description": "A Cron like service capable of scheduling future actions",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "it.sauronsoftware.cron4j/2.2.5"
+      ],
+      "categories": [
+        "scheduling"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Database": {
+      "name": "org.myrobotlab.service.Database",
+      "description": "database - wrapper around jdbc access",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "storage"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.DatabaseConnector": {
+      "name": "org.myrobotlab.service.DatabaseConnector",
+      "description": "This service will run a select statement against a database and return the rows as documents to be published",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "ingest"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.DocumentPipeline": {
+      "name": "org.myrobotlab.service.DocumentPipeline",
+      "description": "This service will pass a document through a document processing pipeline made up of transformers",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "ingest"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.EddieControlBoard": {
+      "name": "org.myrobotlab.service.EddieControlBoard",
+      "description": "Special controller board for robotics",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "microcontroller"
+      ],
+      "peers": {
+        "joystick": {
+          "key": "joystick",
+          "actualName": "joystick",
+          "fullTypeName": "org.myrobotlab.service.Joystick",
+          "comment": "joystick",
+          "isRoot": false
+        },
+        "keyboard": {
+          "key": "keyboard",
+          "actualName": "keyboard",
+          "fullTypeName": "org.myrobotlab.service.Keyboard",
+          "comment": "serial",
+          "isRoot": false
+        },
+        "remote": {
+          "key": "remote",
+          "actualName": "remote",
+          "fullTypeName": "org.myrobotlab.service.RemoteAdapter",
+          "comment": "remote interface",
+          "isRoot": false
+        },
+        "serial": {
+          "key": "serial",
+          "actualName": "serial",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "serial",
+          "isRoot": false
+        },
+        "webgui": {
+          "key": "webgui",
+          "actualName": "webgui",
+          "fullTypeName": "org.myrobotlab.service.WebGui",
+          "comment": "webgui",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Esp8266": {
+      "name": "org.myrobotlab.service.Esp8266",
+      "description": "wifi Arduino",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "microcontroller"
+      ],
+      "peers": {
+        "serial": {
+          "key": "serial",
+          "actualName": "serial",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "serial",
+          "isRoot": false
+        },
+        "webgui": {
+          "key": "webgui",
+          "actualName": "webgui",
+          "fullTypeName": "org.myrobotlab.service.WebGui",
+          "comment": "webgui",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.FileConnector": {
+      "name": "org.myrobotlab.service.FileConnector",
+      "description": "This connector will scan all the files in a directory and production documents",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "ingest"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.GUIService": {
+      "name": "org.myrobotlab.service.GUIService",
+      "description": "Service used to graphically display and control other services",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "display",
+        "location"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.GoPro": {
+      "name": "org.myrobotlab.service.GoPro",
+      "description": "Service to control your GoPro over Wifi",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "video"
+      ],
+      "peers": {
+        "http": {
+          "key": "http",
+          "actualName": "http",
+          "fullTypeName": "org.myrobotlab.service.HttpClient",
+          "comment": "Http for GoPro control",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.GoogleCloud": {
+      "name": "org.myrobotlab.service.GoogleCloud",
+      "description": "google api client service",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "com.google.client/1.22.0",
+        "com.google.vision/1.22.0"
+      ],
+      "categories": [
+        "cloud",
+        "vision",
+        "google"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Gps": {
+      "name": "org.myrobotlab.service.Gps",
+      "description": "The Global Positioning Sensor",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "sensor",
+        "location"
+      ],
+      "peers": {
+        "serial": {
+          "key": "serial",
+          "actualName": "serial",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "serial port for GPS",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.HtmlFilter": {
+      "name": "org.myrobotlab.service.HtmlFilter",
+      "description": "This service will strip html markup from the input text",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "filter",
+        "data"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.HtmlParser": {
+      "name": "org.myrobotlab.service.HtmlParser",
+      "description": "html parser",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.jsoup/1.8.3"
+      ],
+      "categories": [
+        "document"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.HttpClient": {
+      "name": "org.myrobotlab.service.HttpClient",
+      "description": "an HTTP client, used to fetch information on the web",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.apache.commons.httpclient/4.5.2"
+      ],
+      "categories": [
+        "network"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.I2cMux": {
+      "name": "org.myrobotlab.service.I2cMux",
+      "description": "Multiplexer for i2c to be able to use multiple i2c devices",
+      "sponsor": "Mats",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "control",
+        "i2c"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.ImageDisplay": {
+      "name": "org.myrobotlab.service.ImageDisplay",
+      "description": "Service to Display Images",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "display"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.ImapEmailConnector": {
+      "name": "org.myrobotlab.service.ImapEmailConnector",
+      "description": "This connector will connect to an IMAP based email server and crawl the emails",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "data",
+        "ingest"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.InMoov": {
+      "name": "org.myrobotlab.service.InMoov",
+      "description": "The InMoov service",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {
+        "ear": {
+          "key": "ear",
+          "actualName": "ear",
+          "fullTypeName": "org.myrobotlab.service.WebkitSpeechRecognition",
+          "comment": "InMoov webkit speech recognition service",
+          "isRoot": false
+        },
+        "eyesTracking": {
+          "key": "eyesTracking",
+          "actualName": "eyesTracking",
+          "fullTypeName": "org.myrobotlab.service.Tracking",
+          "comment": "Tracking for the eyes",
+          "isRoot": false
+        },
+        "eyesTracking.arduino": {
+          "key": "eyesTracking.arduino",
+          "actualName": "left",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared head Arduino",
+          "isRoot": false
+        },
+        "eyesTracking.opencv": {
+          "key": "eyesTracking.opencv",
+          "actualName": "opencv",
+          "fullTypeName": "org.myrobotlab.service.OpenCV",
+          "comment": "shared head OpenCV",
+          "isRoot": false
+        },
+        "eyesTracking.x": {
+          "key": "eyesTracking.x",
+          "actualName": "head.eyeX",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "shared servo",
+          "isRoot": false
+        },
+        "eyesTracking.y": {
+          "key": "eyesTracking.y",
+          "actualName": "head.eyeY",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "shared servo",
+          "isRoot": false
+        },
+        "head": {
+          "key": "head",
+          "actualName": "head",
+          "fullTypeName": "org.myrobotlab.service.InMoovHead",
+          "comment": "the head",
+          "isRoot": false
+        },
+        "head.arduino": {
+          "key": "head.arduino",
+          "actualName": "left",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared left arduino",
+          "isRoot": false
+        },
+        "headTracking": {
+          "key": "headTracking",
+          "actualName": "headTracking",
+          "fullTypeName": "org.myrobotlab.service.Tracking",
+          "comment": "Head tracking system",
+          "isRoot": false
+        },
+        "headTracking.arduino": {
+          "key": "headTracking.arduino",
+          "actualName": "left",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared head Arduino",
+          "isRoot": false
+        },
+        "headTracking.opencv": {
+          "key": "headTracking.opencv",
+          "actualName": "opencv",
+          "fullTypeName": "org.myrobotlab.service.OpenCV",
+          "comment": "shared head OpenCV",
+          "isRoot": false
+        },
+        "headTracking.x": {
+          "key": "headTracking.x",
+          "actualName": "head.rothead",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "shared servo",
+          "isRoot": false
+        },
+        "headTracking.y": {
+          "key": "headTracking.y",
+          "actualName": "head.neck",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "shared servo",
+          "isRoot": false
+        },
+        "leftArm": {
+          "key": "leftArm",
+          "actualName": "leftArm",
+          "fullTypeName": "org.myrobotlab.service.InMoovArm",
+          "comment": "left arm",
+          "isRoot": false
+        },
+        "leftArm.arduino": {
+          "key": "leftArm.arduino",
+          "actualName": "left",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared left arduino",
+          "isRoot": false
+        },
+        "leftHand": {
+          "key": "leftHand",
+          "actualName": "leftHand",
+          "fullTypeName": "org.myrobotlab.service.InMoovHand",
+          "comment": "left hand",
+          "isRoot": false
+        },
+        "leftHand.arduino": {
+          "key": "leftHand.arduino",
+          "actualName": "left",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared left arduino",
+          "isRoot": false
+        },
+        "mouth": {
+          "key": "mouth",
+          "actualName": "mouth",
+          "fullTypeName": "org.myrobotlab.service.AcapelaSpeech",
+          "comment": "InMoov speech service",
+          "isRoot": false
+        },
+        "mouthControl": {
+          "key": "mouthControl",
+          "actualName": "mouthControl",
+          "fullTypeName": "org.myrobotlab.service.MouthControl",
+          "comment": "MouthControl",
+          "isRoot": false
+        },
+        "mouthControl.arduino": {
+          "key": "mouthControl.arduino",
+          "actualName": "left",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared head Arduino",
+          "isRoot": false
+        },
+        "mouthControl.jaw": {
+          "key": "mouthControl.jaw",
+          "actualName": "head.jaw",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "shared servo",
+          "isRoot": false
+        },
+        "mouthControl.mouth": {
+          "key": "mouthControl.mouth",
+          "actualName": "mouth",
+          "fullTypeName": "org.myrobotlab.service.AcapelaSpeech",
+          "comment": "shared Speech",
+          "isRoot": false
+        },
+        "opencv": {
+          "key": "opencv",
+          "actualName": "opencv",
+          "fullTypeName": "org.myrobotlab.service.OpenCV",
+          "comment": "InMoov OpenCV service",
+          "isRoot": false
+        },
+        "openni": {
+          "key": "openni",
+          "actualName": "openni",
+          "fullTypeName": "org.myrobotlab.service.OpenNi",
+          "comment": "Kinect service",
+          "isRoot": false
+        },
+        "pid": {
+          "key": "pid",
+          "actualName": "pid",
+          "fullTypeName": "org.myrobotlab.service.Pid",
+          "comment": "Pid service",
+          "isRoot": false
+        },
+        "python": {
+          "key": "python",
+          "actualName": "python",
+          "fullTypeName": "org.myrobotlab.service.Python",
+          "comment": "shared Python service",
+          "isRoot": true
+        },
+        "rightArm": {
+          "key": "rightArm",
+          "actualName": "rightArm",
+          "fullTypeName": "org.myrobotlab.service.InMoovArm",
+          "comment": "right arm",
+          "isRoot": false
+        },
+        "rightArm.arduino": {
+          "key": "rightArm.arduino",
+          "actualName": "right",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared right arduino",
+          "isRoot": false
+        },
+        "rightHand": {
+          "key": "rightHand",
+          "actualName": "rightHand",
+          "fullTypeName": "org.myrobotlab.service.InMoovHand",
+          "comment": "right hand",
+          "isRoot": false
+        },
+        "rightHand.arduino": {
+          "key": "rightHand.arduino",
+          "actualName": "right",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared right arduino",
+          "isRoot": false
+        },
+        "torso": {
+          "key": "torso",
+          "actualName": "torso",
+          "fullTypeName": "org.myrobotlab.service.InMoovTorso",
+          "comment": "torso",
+          "isRoot": false
+        },
+        "torso.arduino": {
+          "key": "torso.arduino",
+          "actualName": "left",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared left arduino",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.InMoovArm": {
+      "name": "org.myrobotlab.service.InMoovArm",
+      "description": "the InMoov Arm Service",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "Arduino controller for this arm",
+          "isRoot": false
+        },
+        "bicep": {
+          "key": "bicep",
+          "actualName": "bicep",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Bicep servo",
+          "isRoot": false
+        },
+        "omoplate": {
+          "key": "omoplate",
+          "actualName": "omoplate",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Omoplate servo",
+          "isRoot": false
+        },
+        "rotate": {
+          "key": "rotate",
+          "actualName": "rotate",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Rotate servo",
+          "isRoot": false
+        },
+        "shoulder": {
+          "key": "shoulder",
+          "actualName": "shoulder",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Shoulder servo",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.InMoovGestureCreator": {
+      "name": "org.myrobotlab.service.InMoovGestureCreator",
+      "description": "an easier way to create gestures for InMoov",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.InMoovHand": {
+      "name": "org.myrobotlab.service.InMoovHand",
+      "description": "an easier way to create gestures for InMoov",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "Arduino controller for this arm",
+          "isRoot": false
+        },
+        "index": {
+          "key": "index",
+          "actualName": "index",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Index servo",
+          "isRoot": false
+        },
+        "leap": {
+          "key": "leap",
+          "actualName": "leap",
+          "fullTypeName": "org.myrobotlab.service.LeapMotion",
+          "comment": "Leap Motion Service",
+          "isRoot": false
+        },
+        "majeure": {
+          "key": "majeure",
+          "actualName": "majeure",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Majeure servo",
+          "isRoot": false
+        },
+        "pinky": {
+          "key": "pinky",
+          "actualName": "pinky",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Pinky servo",
+          "isRoot": false
+        },
+        "ringFinger": {
+          "key": "ringFinger",
+          "actualName": "ringFinger",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "RingFinger servo",
+          "isRoot": false
+        },
+        "thumb": {
+          "key": "thumb",
+          "actualName": "thumb",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Thumb servo",
+          "isRoot": false
+        },
+        "wrist": {
+          "key": "wrist",
+          "actualName": "wrist",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Wrist servo",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.InMoovHead": {
+      "name": "org.myrobotlab.service.InMoovHead",
+      "description": "InMoov Head Service",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "Arduino controller for this arm",
+          "isRoot": false
+        },
+        "eyeX": {
+          "key": "eyeX",
+          "actualName": "eyeX",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Eyes pan servo",
+          "isRoot": false
+        },
+        "eyeY": {
+          "key": "eyeY",
+          "actualName": "eyeY",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Eyes tilt servo",
+          "isRoot": false
+        },
+        "jaw": {
+          "key": "jaw",
+          "actualName": "jaw",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Jaw servo",
+          "isRoot": false
+        },
+        "neck": {
+          "key": "neck",
+          "actualName": "neck",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Head tilt servo",
+          "isRoot": false
+        },
+        "rothead": {
+          "key": "rothead",
+          "actualName": "rothead",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Head pan servo",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.InMoovTorso": {
+      "name": "org.myrobotlab.service.InMoovTorso",
+      "description": "InMoov Torso",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "Arduino controller for this arm",
+          "isRoot": false
+        },
+        "lowStom": {
+          "key": "lowStom",
+          "actualName": "lowStom",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Low Stomach servo",
+          "isRoot": false
+        },
+        "midStom": {
+          "key": "midStom",
+          "actualName": "midStom",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Mid Stomach servo",
+          "isRoot": false
+        },
+        "topStom": {
+          "key": "topStom",
+          "actualName": "topStom",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "Top Stomach servo",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Incubator": {
+      "name": "org.myrobotlab.service.Incubator",
+      "description": "This connector will connect to an IMAP based email server and crawl the emails",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "framework",
+        "testing"
+      ],
+      "peers": {
+        "python": {
+          "key": "python",
+          "actualName": "python",
+          "fullTypeName": "org.myrobotlab.service.Python",
+          "comment": "shared python instance",
+          "isRoot": false
+        },
+        "xmpp": {
+          "key": "xmpp",
+          "actualName": "xmpp",
+          "fullTypeName": "org.myrobotlab.service.Xmpp",
+          "comment": "Xmpp service",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.InverseKinematics": {
+      "name": "org.myrobotlab.service.InverseKinematics",
+      "description": "Inverse Kinematics",
+      "ready": false,
+      "available": false,
+      "dependencies": [],
+      "categories": [
+        "robot",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.InverseKinematics3D": {
+      "name": "org.myrobotlab.service.InverseKinematics3D",
+      "description": "a 3D kinematics service supporting D-H parameters",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.IpCamera": {
+      "name": "org.myrobotlab.service.IpCamera",
+      "description": "control and video stream capture for generic ip camera",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.bytedeco.javacv/1.1"
+      ],
+      "categories": [
+        "video"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.JFugue": {
+      "name": "org.myrobotlab.service.JFugue",
+      "description": "service wrapping Jfugue, used for music and sound generation",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.jfugue.music/5.0"
+      ],
+      "categories": [
+        "sound"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.JavaScript": {
+      "name": "org.myrobotlab.service.JavaScript",
+      "description": "javascript",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "programming"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Joystick": {
+      "name": "org.myrobotlab.service.Joystick",
+      "description": "used for interfacing with a Joystick",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "net.java.games.jinput/20120914"
+      ],
+      "categories": [
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Keyboard": {
+      "name": "org.myrobotlab.service.Keyboard",
+      "description": "keyboard interface",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.LeapMotion": {
+      "name": "org.myrobotlab.service.LeapMotion",
+      "description": "Leap Motion Service",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "com.leapmotion/2.1.3"
+      ],
+      "categories": [
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Lidar": {
+      "name": "org.myrobotlab.service.Lidar",
+      "description": "The Lidar Service - Light Detection And Ranging",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Log": {
+      "name": "org.myrobotlab.service.Log",
+      "description": "Logging Service helpful in diagnostics",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "famework"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Mail": {
+      "name": "org.myrobotlab.service.Mail",
+      "description": "General service for all your mail needs",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "connectivity"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.MarySpeech": {
+      "name": "org.myrobotlab.service.MarySpeech",
+      "description": "Speech synthesis based on MaryTTS",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "marytts/5.1.2",
+        "opennlp/1.6",
+        "com.sun.speech.freetts/1.2"
+      ],
+      "categories": [
+        "speech",
+        "sound"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Motor": {
+      "name": "org.myrobotlab.service.Motor",
+      "description": "General Motor Service",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "motor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.MotorPulse": {
+      "name": "org.myrobotlab.service.MotorPulse",
+      "description": "Motor service with 2 pwm pins",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "motor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.MouthControl": {
+      "name": "org.myrobotlab.service.MouthControl",
+      "description": "Mouth movements based on spoken text",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "control"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "shared Arduino instance",
+          "isRoot": false
+        },
+        "jaw": {
+          "key": "jaw",
+          "actualName": "jaw",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "shared Jaw servo instance",
+          "isRoot": false
+        },
+        "mouth": {
+          "key": "mouth",
+          "actualName": "mouth",
+          "fullTypeName": "org.myrobotlab.service.AcapelaSpeech",
+          "comment": "shared Speech instance",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Mpu6050": {
+      "name": "org.myrobotlab.service.Mpu6050",
+      "description": "General MPU-6050 acclerometer and gyro",
+      "sponsor": "Mats",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "microcontroller",
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Mqtt": {
+      "name": "org.myrobotlab.service.Mqtt",
+      "description": "This is an Mqtt client based on the Paho Mqtt client library. Mqtt is a machine-to-machine (M2M)/'Internet of Things' connectivity protocol. See http://mqtt.org",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.eclipse.paho/1.0"
+      ],
+      "categories": [
+        "cloud",
+        "data"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.MultiWii": {
+      "name": "org.myrobotlab.service.MultiWii",
+      "description": "MultiWii interface",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.MyoThalmic": {
+      "name": "org.myrobotlab.service.MyoThalmic",
+      "description": "Myo service to control with the Myo armband",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "sensor",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.NeoPixel": {
+      "name": "org.myrobotlab.service.NeoPixel",
+      "description": "Control a Neopixel hardware",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "Neopixel, Control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Node": {
+      "name": "org.myrobotlab.service.Node",
+      "description": "embedded node js",
+      "ready": false,
+      "available": false,
+      "dependencies": [
+        "org.node/0.1.1"
+      ],
+      "categories": [
+        "programming"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.OculusDIY": {
+      "name": "org.myrobotlab.service.OculusDIY",
+      "description": "Service to receive and compute data from a DIY Oculus",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "sensor",
+        "control",
+        "video"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "Arduino for DIYOculus and Myo",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.OculusRift": {
+      "name": "org.myrobotlab.service.OculusRift",
+      "description": "The Oculus Rift Head Tracking Service",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.saintandreas.jovr/0.7"
+      ],
+      "categories": [
+        "sensor",
+        "control",
+        "video"
+      ],
+      "peers": {
+        "leftOpenCV": {
+          "key": "leftOpenCV",
+          "actualName": "leftOpenCV",
+          "fullTypeName": "org.myrobotlab.service.OpenCV",
+          "comment": "Left Eye Camera",
+          "isRoot": false
+        },
+        "rightOpenCV": {
+          "key": "rightOpenCV",
+          "actualName": "rightOpenCV",
+          "fullTypeName": "org.myrobotlab.service.OpenCV",
+          "comment": "Right Eye Camera",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.OledSsd1306": {
+      "name": "org.myrobotlab.service.OledSsd1306",
+      "description": "OLED driver using SSD1306 driver and the i2c protocol",
+      "sponsor": "Mats",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "control",
+        "i2c"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.OpenCV": {
+      "name": "org.myrobotlab.service.OpenCV",
+      "description": "OpenCV (computer vision) service wrapping many of the functions and filters of OpenCV",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "pl.sarxos.webcam/0.3.10",
+        "org.bytedeco.javacv/1.1"
+      ],
+      "categories": [
+        "vision",
+        "sensor",
+        "video"
+      ],
+      "peers": {
+        "streamer": {
+          "key": "streamer",
+          "actualName": "streamer",
+          "fullTypeName": "org.myrobotlab.service.VideoStreamer",
+          "comment": "Shared Video Streamer",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.OpenNi": {
+      "name": "org.myrobotlab.service.OpenNi",
+      "description": "OpenNI Service - 3D sensor",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "com.googlecode.simpleopenni/1.96"
+      ],
+      "categories": [
+        "vision",
+        "sensor",
+        "video"
+      ],
+      "peers": {
+        "streamer": {
+          "key": "streamer",
+          "actualName": "streamer",
+          "fullTypeName": "org.myrobotlab.service.VideoStreamer",
+          "comment": "video streaming service for webgui.",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Pcf8574": {
+      "name": "org.myrobotlab.service.Pcf8574",
+      "description": "Pcf8574 i2c 8 pin I/O extender",
+      "sponsor": "Mats",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "shield",
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Picaxe": {
+      "name": "org.myrobotlab.service.Picaxe",
+      "description": "Picaxe microcontroller",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "microcontroller"
+      ],
+      "peers": {
+        "serial": {
+          "key": "serial",
+          "actualName": "serial",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "serial service",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.PickToLight": {
+      "name": "org.myrobotlab.service.PickToLight",
+      "description": "Pick to light system",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.apache.commons.httpclient/4.5.2"
+      ],
+      "categories": [
+        "industrial"
+      ],
+      "peers": {
+        "raspi": {
+          "key": "raspi",
+          "actualName": "raspi",
+          "fullTypeName": "org.myrobotlab.service.RasPi",
+          "comment": "raspi",
+          "isRoot": false
+        },
+        "webgui": {
+          "key": "webgui",
+          "actualName": "webgui",
+          "fullTypeName": "org.myrobotlab.service.WebGui",
+          "comment": "web server interface",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Pid": {
+      "name": "org.myrobotlab.service.Pid",
+      "description": "A proportional integral derivative controller (Pid controller) commonly used in industrial control systems",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "industrial",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Pingdar": {
+      "name": "org.myrobotlab.service.Pingdar",
+      "description": "used as a ultra sonic radar",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "display",
+        "sensor"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "arduino",
+          "isRoot": false
+        },
+        "sensor": {
+          "key": "sensor",
+          "actualName": "sensor",
+          "fullTypeName": "org.myrobotlab.service.UltrasonicSensor",
+          "comment": "sensor",
+          "isRoot": false
+        },
+        "servo": {
+          "key": "servo",
+          "actualName": "servo",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Pir": {
+      "name": "org.myrobotlab.service.Pir",
+      "description": "PIR - Passive Infrared Sensor",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Piston": {
+      "name": "org.myrobotlab.service.Piston",
+      "description": "used as a general template",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "general"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Plantoid": {
+      "name": "org.myrobotlab.service.Plantoid",
+      "description": "The Plantoid Service",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "arduino service",
+          "isRoot": false
+        },
+        "audioFile": {
+          "key": "audioFile",
+          "actualName": "audioFile",
+          "fullTypeName": "org.myrobotlab.service.AudioFile",
+          "comment": "audio file service",
+          "isRoot": false
+        },
+        "jFugue": {
+          "key": "jFugue",
+          "actualName": "jFugue",
+          "fullTypeName": "org.myrobotlab.service.JFugue",
+          "comment": "jfugue service",
+          "isRoot": false
+        },
+        "leg1": {
+          "key": "leg1",
+          "actualName": "leg1",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "leg1",
+          "isRoot": false
+        },
+        "leg2": {
+          "key": "leg2",
+          "actualName": "leg2",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "leg2",
+          "isRoot": false
+        },
+        "leg3": {
+          "key": "leg3",
+          "actualName": "leg3",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "leg3",
+          "isRoot": false
+        },
+        "leg4": {
+          "key": "leg4",
+          "actualName": "leg4",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "leg4",
+          "isRoot": false
+        },
+        "opencv": {
+          "key": "opencv",
+          "actualName": "opencv",
+          "fullTypeName": "org.myrobotlab.service.OpenCV",
+          "comment": "pilot camera",
+          "isRoot": false
+        },
+        "pan": {
+          "key": "pan",
+          "actualName": "pan",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "pan",
+          "isRoot": false
+        },
+        "streamer": {
+          "key": "streamer",
+          "actualName": "streamer",
+          "fullTypeName": "org.myrobotlab.service.VideoStreamer",
+          "comment": "video streamer",
+          "isRoot": false
+        },
+        "tilt": {
+          "key": "tilt",
+          "actualName": "tilt",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "tilt",
+          "isRoot": false
+        },
+        "tracking": {
+          "key": "tracking",
+          "actualName": "tracking",
+          "fullTypeName": "org.myrobotlab.service.Tracking",
+          "comment": "tracking service",
+          "isRoot": false
+        },
+        "xmpp": {
+          "key": "xmpp",
+          "actualName": "xmpp",
+          "fullTypeName": "org.myrobotlab.service.Xmpp",
+          "comment": "Xmpp service",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.ProgramAB": {
+      "name": "org.myrobotlab.service.ProgramAB",
+      "description": "AIML 2.0 Reference interpreter based on Program AB",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.alicebot.ab/0.0.1-kw",
+        "org.json/20090211"
+      ],
+      "categories": [
+        "intelligence"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Python": {
+      "name": "org.myrobotlab.service.Python",
+      "description": "Python ID",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "control",
+        "programming"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.RSSConnector": {
+      "name": "org.myrobotlab.service.RSSConnector",
+      "description": "This will crawl an rss feed at the given url and break apart the page into Documents",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "data"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.RasPi": {
+      "name": "org.myrobotlab.service.RasPi",
+      "description": "Raspberry Pi service used for accessing specific RasPi hardware such as I2C",
+      "sponsor": "Mats",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "com.pi4j.pi4j/1.1-SNAPSHOT"
+      ],
+      "categories": [
+        "control",
+        "i2c"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.RemoteAdapter": {
+      "name": "org.myrobotlab.service.RemoteAdapter",
+      "description": "allows remote communication between applets, or remote instances of myrobotlab",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.atmosphere.nettosphere/2.3.0"
+      ],
+      "categories": [
+        "framework",
+        "connectivity",
+        "network"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.RobotPlatform": {
+      "name": "org.myrobotlab.service.RobotPlatform",
+      "description": "used to encapsulate many of the functions and formulas regarding 2 motor platforms encoders and other feedback mechanisms can be added to provide heading, location and other information",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Roomba": {
+      "name": "org.myrobotlab.service.Roomba",
+      "description": "Roomba control",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot",
+        "control"
+      ],
+      "peers": {
+        "serial": {
+          "key": "serial",
+          "actualName": "serial",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "serial",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Ros": {
+      "name": "org.myrobotlab.service.Ros",
+      "description": "interface to Ros",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "bridge"
+      ],
+      "peers": {
+        "serial": {
+          "key": "serial",
+          "actualName": "serial",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "serial",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Runtime": {
+      "name": "org.myrobotlab.service.Runtime",
+      "description": "Runtime singleton service responsible for the creation and registry of all other services",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "framework"
+      ],
+      "peers": {
+        "cli": {
+          "key": "cli",
+          "actualName": "cli",
+          "fullTypeName": "org.myrobotlab.service.Cli",
+          "comment": "command line interpreter for the runtime",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Sabertooth": {
+      "name": "org.myrobotlab.service.Sabertooth",
+      "description": "Interface for the powerful Sabertooth motor controller",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "motor",
+        "control"
+      ],
+      "peers": {
+        "serial": {
+          "key": "serial",
+          "actualName": "serial",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "Serial Port",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Security": {
+      "name": "org.myrobotlab.service.Security",
+      "description": "provides security",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "security",
+        "framework"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.SegmentDisplay": {
+      "name": "org.myrobotlab.service.SegmentDisplay",
+      "description": "used as a general template",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "general"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.SensorMonitor": {
+      "name": "org.myrobotlab.service.SensorMonitor",
+      "description": "sensor monitor - capable of displaying sensor information in a crude oscilliscope fasion",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "display",
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Serial": {
+      "name": "org.myrobotlab.service.Serial",
+      "description": "reads and writes data to a serial port",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "com.googlecode.jssc/2.8.0"
+      ],
+      "categories": [
+        "microcontroller",
+        "sensor",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Servo": {
+      "name": "org.myrobotlab.service.Servo",
+      "description": "Controls a servo",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "motor",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.ServoOrchestrator": {
+      "name": "org.myrobotlab.service.ServoOrchestrator",
+      "description": "organize your Servo-movements",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "motor",
+        "display",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Shoutbox": {
+      "name": "org.myrobotlab.service.Shoutbox",
+      "description": "shoutbox server",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "connectivity"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.SlamBad": {
+      "name": "org.myrobotlab.service.SlamBad",
+      "description": "basic simulator based on Simbad",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "javax.vecmath/1.5.1",
+        "com.sun.java3d/1.5.1"
+      ],
+      "categories": [
+        "simulation",
+        "display"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Solr": {
+      "name": "org.myrobotlab.service.Solr",
+      "description": "Solr Service - Open source search engine",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.apache.solr/4.10.2"
+      ],
+      "categories": [
+        "search",
+        "data"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Sphinx": {
+      "name": "org.myrobotlab.service.Sphinx",
+      "description": "open source pure Java speech recognition",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "javax.speech.recognition/1.0",
+        "edu.cmu.sphinx/4-1.0beta6"
+      ],
+      "categories": [
+        "speech recognition",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Sprinkler": {
+      "name": "org.myrobotlab.service.Sprinkler",
+      "description": "sprinkler system",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "home automation",
+        "control"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "Arduino for relay control",
+          "isRoot": false
+        },
+        "cron": {
+          "key": "cron",
+          "actualName": "cron",
+          "fullTypeName": "org.myrobotlab.service.Cron",
+          "comment": "scheduler for sprinklers",
+          "isRoot": false
+        },
+        "webgui": {
+          "key": "webgui",
+          "actualName": "webgui",
+          "fullTypeName": "org.myrobotlab.service.WebGui",
+          "comment": "web interface",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Sweety": {
+      "name": "org.myrobotlab.service.Sweety",
+      "description": "Service for the Sweety robot",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {
+        "USback": {
+          "key": "USback",
+          "actualName": "USback",
+          "fullTypeName": "org.myrobotlab.service.UltrasonicSensor",
+          "comment": "USback",
+          "isRoot": false
+        },
+        "USbackLeft": {
+          "key": "USbackLeft",
+          "actualName": "USbackLeft",
+          "fullTypeName": "org.myrobotlab.service.UltrasonicSensor",
+          "comment": "USbackLeft",
+          "isRoot": false
+        },
+        "USbackRight": {
+          "key": "USbackRight",
+          "actualName": "USbackRight",
+          "fullTypeName": "org.myrobotlab.service.UltrasonicSensor",
+          "comment": "USbackRight",
+          "isRoot": false
+        },
+        "USfront": {
+          "key": "USfront",
+          "actualName": "USfront",
+          "fullTypeName": "org.myrobotlab.service.UltrasonicSensor",
+          "comment": "USfront",
+          "isRoot": false
+        },
+        "USfrontLeft": {
+          "key": "USfrontLeft",
+          "actualName": "USfrontLeft",
+          "fullTypeName": "org.myrobotlab.service.UltrasonicSensor",
+          "comment": "USfrontLeft",
+          "isRoot": false
+        },
+        "USfrontRight": {
+          "key": "USfrontRight",
+          "actualName": "USfrontRight",
+          "fullTypeName": "org.myrobotlab.service.UltrasonicSensor",
+          "comment": "USfrontRight",
+          "isRoot": false
+        },
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "arduino",
+          "isRoot": false
+        },
+        "chatBot": {
+          "key": "chatBot",
+          "actualName": "chatBot",
+          "fullTypeName": "org.myrobotlab.service.ProgramAB",
+          "comment": "chatBot",
+          "isRoot": false
+        },
+        "ear": {
+          "key": "ear",
+          "actualName": "ear",
+          "fullTypeName": "org.myrobotlab.service.WebkitSpeechRecognition",
+          "comment": "ear",
+          "isRoot": false
+        },
+        "htmlFilter": {
+          "key": "htmlFilter",
+          "actualName": "htmlFilter",
+          "fullTypeName": "org.myrobotlab.service.HtmlFilter",
+          "comment": "htmlfilter",
+          "isRoot": false
+        },
+        "leftArm": {
+          "key": "leftArm",
+          "actualName": "leftArm",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "leftForearm": {
+          "key": "leftForearm",
+          "actualName": "leftForearm",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "leftHand": {
+          "key": "leftHand",
+          "actualName": "leftHand",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "leftShoulder": {
+          "key": "leftShoulder",
+          "actualName": "leftShoulder",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "leftTracker": {
+          "key": "leftTracker",
+          "actualName": "leftTracker",
+          "fullTypeName": "org.myrobotlab.service.Tracking",
+          "comment": "leftTracker",
+          "isRoot": false
+        },
+        "leftWrist": {
+          "key": "leftWrist",
+          "actualName": "leftWrist",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "mouth": {
+          "key": "mouth",
+          "actualName": "mouth",
+          "fullTypeName": "org.myrobotlab.service.AcapelaSpeech",
+          "comment": "sweetys mouth",
+          "isRoot": false
+        },
+        "neckPan": {
+          "key": "neckPan",
+          "actualName": "neckPan",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "neckTilt": {
+          "key": "neckTilt",
+          "actualName": "neckTilt",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "openni": {
+          "key": "openni",
+          "actualName": "openni",
+          "fullTypeName": "org.myrobotlab.service.OpenNi",
+          "comment": "openni",
+          "isRoot": false
+        },
+        "pid": {
+          "key": "pid",
+          "actualName": "pid",
+          "fullTypeName": "org.myrobotlab.service.Pid",
+          "comment": "pid",
+          "isRoot": false
+        },
+        "rightArm": {
+          "key": "rightArm",
+          "actualName": "rightArm",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "rightForearm": {
+          "key": "rightForearm",
+          "actualName": "rightForearm",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "rightHand": {
+          "key": "rightHand",
+          "actualName": "rightHand",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "rightShoulder": {
+          "key": "rightShoulder",
+          "actualName": "rightShoulder",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "rightTracker": {
+          "key": "rightTracker",
+          "actualName": "rightTracker",
+          "fullTypeName": "org.myrobotlab.service.Tracking",
+          "comment": "rightTracker",
+          "isRoot": false
+        },
+        "rightWrist": {
+          "key": "rightWrist",
+          "actualName": "rightWrist",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "servo",
+          "isRoot": false
+        },
+        "webGui": {
+          "key": "webGui",
+          "actualName": "webGui",
+          "fullTypeName": "org.myrobotlab.service.WebGui",
+          "comment": "webGui",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.TesseractOcr": {
+      "name": "org.myrobotlab.service.TesseractOcr",
+      "description": "Optical character recognition - the ability to read",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "net.sourceforge.tess4j/1.1",
+        "com.sun.jna/3.2.2"
+      ],
+      "categories": [
+        "intelligence"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.TestCatcher": {
+      "name": "org.myrobotlab.service.TestCatcher",
+      "description": "This service is used to test messaging",
+      "ready": false,
+      "available": false,
+      "dependencies": [],
+      "categories": [
+        "framework",
+        "testing"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.TestThrower": {
+      "name": "org.myrobotlab.service.TestThrower",
+      "description": "TestThrower is used with TestCatcher to test messaging",
+      "ready": false,
+      "available": false,
+      "dependencies": [],
+      "categories": [
+        "framework",
+        "testing"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.TextTransform": {
+      "name": "org.myrobotlab.service.TextTransform",
+      "description": "TextTransform",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "filter",
+        "data"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.ThingSpeak": {
+      "name": "org.myrobotlab.service.ThingSpeak",
+      "description": "Service which can relay data to a ThingSpeak account",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "cloud",
+        "data"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.TopCodes": {
+      "name": "org.myrobotlab.service.TopCodes",
+      "description": "Topcodes finds visual references and identifiers",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "edu.northwestern.topcodes/1.0"
+      ],
+      "categories": [
+        "vision",
+        "sensor",
+        "video"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Tracking": {
+      "name": "org.myrobotlab.service.Tracking",
+      "description": "proportional control, tracking, and translation",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "vision",
+        "sensor",
+        "control",
+        "video"
+      ],
+      "peers": {
+        "arduino": {
+          "key": "arduino",
+          "actualName": "arduino",
+          "fullTypeName": "org.myrobotlab.service.Arduino",
+          "comment": "Tracking Arduino instance",
+          "isRoot": false
+        },
+        "opencv": {
+          "key": "opencv",
+          "actualName": "opencv",
+          "fullTypeName": "org.myrobotlab.service.OpenCV",
+          "comment": "Tracking OpenCV instance",
+          "isRoot": false
+        },
+        "pid": {
+          "key": "pid",
+          "actualName": "pid",
+          "fullTypeName": "org.myrobotlab.service.Pid",
+          "comment": "Pid service - for all your pid needs",
+          "isRoot": false
+        },
+        "x": {
+          "key": "x",
+          "actualName": "x",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "pan servo",
+          "isRoot": false
+        },
+        "y": {
+          "key": "y",
+          "actualName": "y",
+          "fullTypeName": "org.myrobotlab.service.Servo",
+          "comment": "tilt servo",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.Tutorial": {
+      "name": "org.myrobotlab.service.Tutorial",
+      "description": "used as a general tutorial",
+      "ready": false,
+      "available": false,
+      "dependencies": [],
+      "categories": [
+        "general"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Twitter": {
+      "name": "org.myrobotlab.service.Twitter",
+      "description": "Service which can relay tweets",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.twitter4j.twitter/3.0.5"
+      ],
+      "categories": [
+        "cloud",
+        "connectivity"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.UltrasonicSensor": {
+      "name": "org.myrobotlab.service.UltrasonicSensor",
+      "description": "Ranging sensor",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.VideoStreamer": {
+      "name": "org.myrobotlab.service.VideoStreamer",
+      "description": "Video streaming service",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "display",
+        "video"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.VirtualDevice": {
+      "name": "org.myrobotlab.service.VirtualDevice",
+      "description": "A service which can create virtual devices, like the virtual Arduino",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "testing"
+      ],
+      "peers": {
+        "logic": {
+          "key": "logic",
+          "actualName": "logic",
+          "fullTypeName": "org.myrobotlab.service.Python",
+          "comment": "logic to implement",
+          "isRoot": false
+        },
+        "uart": {
+          "key": "uart",
+          "actualName": "uart",
+          "fullTypeName": "org.myrobotlab.service.Serial",
+          "comment": "uart",
+          "isRoot": false
+        }
+      }
+    },
+    "org.myrobotlab.service.WebGui": {
+      "name": "org.myrobotlab.service.WebGui",
+      "description": "web display",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "display"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Webcam": {
+      "name": "org.myrobotlab.service.Webcam",
+      "description": "used as a general webcam",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "video"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.WebkitSpeechRecognition": {
+      "name": "org.myrobotlab.service.WebkitSpeechRecognition",
+      "description": "Speech recognition using Google Chrome webkit",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "speech recognition"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Wii": {
+      "name": "org.myrobotlab.service.Wii",
+      "description": "Wii mote control and sensor info",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "wiiuse.wiimote/0.12b"
+      ],
+      "categories": [
+        "sensor",
+        "control"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.WiiBot": {
+      "name": "org.myrobotlab.service.WiiBot",
+      "description": "(not implemented) - robot utilizing the wii mote and wiidar",
+      "ready": false,
+      "available": false,
+      "dependencies": [],
+      "categories": [
+        "robot"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.WiiDar": {
+      "name": "org.myrobotlab.service.WiiDar",
+      "description": "ranging using a wiimote",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "wiiuse.wiimote/0.12b"
+      ],
+      "categories": [
+        "sensor"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.WikiDataFetcher": {
+      "name": "org.myrobotlab.service.WikiDataFetcher",
+      "description": "service interface for Wikipedia",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.apache.commons.commons-lang3/3.3.2",
+        "org.wikidata.wdtk/0.7.0",
+        "org.apache.commons.httpclient/4.5.2",
+        "com.fasterxml.jackson.core/2.5.0"
+      ],
+      "categories": [
+        "intelligence"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.WolframAlpha": {
+      "name": "org.myrobotlab.service.WolframAlpha",
+      "description": "Wolfram service",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "com.wolfram.alpha/1.1",
+        "org.apache.commons.httpclient/4.5.2"
+      ],
+      "categories": [
+        "data",
+        "intelligence"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.XMLConnector": {
+      "name": "org.myrobotlab.service.XMLConnector",
+      "description": "This is an XML Connector that will parse a large xml file into many small xml documents",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "data"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service.Xmpp": {
+      "name": "org.myrobotlab.service.Xmpp",
+      "description": "xmpp service to access the jabber network",
+      "ready": false,
+      "available": true,
+      "dependencies": [
+        "org.jivesoftware.smack/4.1.6"
+      ],
+      "categories": [
+        "connectivity"
+      ],
+      "peers": {}
+    },
+    "org.myrobotlab.service._TemplateService": {
+      "name": "org.myrobotlab.service._TemplateService",
+      "description": "used as a general template",
+      "ready": false,
+      "available": true,
+      "dependencies": [],
+      "categories": [
+        "general"
+      ],
+      "peers": {}
+    }
+  },
+  "categoryTypes": {
+    "Neopixel, Control": {
+      "serviceTypes": [
+        "org.myrobotlab.service.NeoPixel"
+      ]
+    },
+    "ai": {
+      "serviceTypes": [
+        "org.myrobotlab.service.AzureTranslator"
+      ]
+    },
+    "bridge": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Ros"
+      ]
+    },
+    "cloud": {
+      "serviceTypes": [
+        "org.myrobotlab.service.ThingSpeak",
+        "org.myrobotlab.service.Twitter",
+        "org.myrobotlab.service.AzureTranslator",
+        "org.myrobotlab.service.GoogleCloud",
+        "org.myrobotlab.service.Mqtt"
+      ]
+    },
+    "connectivity": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Xmpp",
+        "org.myrobotlab.service.Shoutbox",
+        "org.myrobotlab.service.RemoteAdapter",
+        "org.myrobotlab.service.Twitter",
+        "org.myrobotlab.service.Mail"
+      ]
+    },
+    "control": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Servo",
+        "org.myrobotlab.service.Serial",
+        "org.myrobotlab.service.RobotPlatform",
+        "org.myrobotlab.service.I2cMux",
+        "org.myrobotlab.service.InverseKinematics3D",
+        "org.myrobotlab.service.Tracking",
+        "org.myrobotlab.service.MouthControl",
+        "org.myrobotlab.service.Python",
+        "org.myrobotlab.service.Pid",
+        "org.myrobotlab.service.InverseKinematics",
+        "org.myrobotlab.service.Joystick",
+        "org.myrobotlab.service.MyoThalmic",
+        "org.myrobotlab.service.OculusRift",
+        "org.myrobotlab.service.OledSsd1306",
+        "org.myrobotlab.service.RasPi",
+        "org.myrobotlab.service.Roomba",
+        "org.myrobotlab.service.Wii",
+        "org.myrobotlab.service.Keyboard",
+        "org.myrobotlab.service.MultiWii",
+        "org.myrobotlab.service.OculusDIY",
+        "org.myrobotlab.service.Sabertooth",
+        "org.myrobotlab.service.ServoOrchestrator",
+        "org.myrobotlab.service.Sphinx",
+        "org.myrobotlab.service.Sprinkler"
+      ]
+    },
+    "data": {
+      "serviceTypes": [
+        "org.myrobotlab.service.ThingSpeak",
+        "org.myrobotlab.service.WolframAlpha",
+        "org.myrobotlab.service.HtmlFilter",
+        "org.myrobotlab.service.ImapEmailConnector",
+        "org.myrobotlab.service.Mqtt",
+        "org.myrobotlab.service.RSSConnector",
+        "org.myrobotlab.service.Solr",
+        "org.myrobotlab.service.TextTransform",
+        "org.myrobotlab.service.XMLConnector"
+      ]
+    },
+    "display": {
+      "serviceTypes": [
+        "org.myrobotlab.service.GUIService",
+        "org.myrobotlab.service.Blender",
+        "org.myrobotlab.service.VideoStreamer",
+        "org.myrobotlab.service.Pingdar",
+        "org.myrobotlab.service.SensorMonitor",
+        "org.myrobotlab.service.SlamBad",
+        "org.myrobotlab.service.WebGui",
+        "org.myrobotlab.service.ImageDisplay",
+        "org.myrobotlab.service.ServoOrchestrator"
+      ]
+    },
+    "document": {
+      "serviceTypes": [
+        "org.myrobotlab.service.HtmlParser"
+      ]
+    },
+    "famework": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Log"
+      ]
+    },
+    "filter": {
+      "serviceTypes": [
+        "org.myrobotlab.service.HtmlFilter",
+        "org.myrobotlab.service.TextTransform"
+      ]
+    },
+    "framework": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Agent",
+        "org.myrobotlab.service.Cli",
+        "org.myrobotlab.service.RemoteAdapter",
+        "org.myrobotlab.service.Runtime",
+        "org.myrobotlab.service.Security",
+        "org.myrobotlab.service.Incubator",
+        "org.myrobotlab.service.TestCatcher",
+        "org.myrobotlab.service.TestThrower"
+      ]
+    },
+    "game": {
+      "serviceTypes": [
+        "org.myrobotlab.service.ChessGame",
+        "org.myrobotlab.service.ChessGameManager"
+      ]
+    },
+    "general": {
+      "serviceTypes": [
+        "org.myrobotlab.service.BoofCv",
+        "org.myrobotlab.service._TemplateService",
+        "org.myrobotlab.service.Chassis",
+        "org.myrobotlab.service.Piston",
+        "org.myrobotlab.service.SegmentDisplay",
+        "org.myrobotlab.service.Tutorial"
+      ]
+    },
+    "google": {
+      "serviceTypes": [
+        "org.myrobotlab.service.GoogleCloud"
+      ]
+    },
+    "home automation": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Sprinkler"
+      ]
+    },
+    "i2c": {
+      "serviceTypes": [
+        "org.myrobotlab.service.I2cMux",
+        "org.myrobotlab.service.OledSsd1306",
+        "org.myrobotlab.service.RasPi"
+      ]
+    },
+    "industrial": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Pid",
+        "org.myrobotlab.service.PickToLight"
+      ]
+    },
+    "ingest": {
+      "serviceTypes": [
+        "org.myrobotlab.service.CSVConnector",
+        "org.myrobotlab.service.DatabaseConnector",
+        "org.myrobotlab.service.DocumentPipeline",
+        "org.myrobotlab.service.FileConnector",
+        "org.myrobotlab.service.ImapEmailConnector"
+      ]
+    },
+    "intellegence": {
+      "serviceTypes": [
+        "org.myrobotlab.service.CleverBot"
+      ]
+    },
+    "intelligence": {
+      "serviceTypes": [
+        "org.myrobotlab.service.ProgramAB",
+        "org.myrobotlab.service.TesseractOcr",
+        "org.myrobotlab.service.WolframAlpha",
+        "org.myrobotlab.service.WikiDataFetcher"
+      ]
+    },
+    "location": {
+      "serviceTypes": [
+        "org.myrobotlab.service.GUIService",
+        "org.myrobotlab.service.Gps"
+      ]
+    },
+    "microcontroller": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Arduino",
+        "org.myrobotlab.service.Serial",
+        "org.myrobotlab.service.Mpu6050",
+        "org.myrobotlab.service.BeagleBoardBlack",
+        "org.myrobotlab.service.Bno055",
+        "org.myrobotlab.service.EddieControlBoard",
+        "org.myrobotlab.service.Esp8266",
+        "org.myrobotlab.service.Picaxe"
+      ]
+    },
+    "motor": {
+      "serviceTypes": [
+        "org.myrobotlab.service.AdafruitMotorShield",
+        "org.myrobotlab.service.Motor",
+        "org.myrobotlab.service.Servo",
+        "org.myrobotlab.service.MotorPulse",
+        "org.myrobotlab.service.Sabertooth",
+        "org.myrobotlab.service.ServoOrchestrator"
+      ]
+    },
+    "network": {
+      "serviceTypes": [
+        "org.myrobotlab.service.RemoteAdapter",
+        "org.myrobotlab.service.HttpClient"
+      ]
+    },
+    "programming": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Python",
+        "org.myrobotlab.service.Blocks",
+        "org.myrobotlab.service.JavaScript",
+        "org.myrobotlab.service.Node"
+      ]
+    },
+    "robot": {
+      "serviceTypes": [
+        "org.myrobotlab.service.RobotPlatform",
+        "org.myrobotlab.service.InMoovArm",
+        "org.myrobotlab.service.InverseKinematics3D",
+        "org.myrobotlab.service.InMoov",
+        "org.myrobotlab.service.InMoovHead",
+        "org.myrobotlab.service.InMoovTorso",
+        "org.myrobotlab.service.InMoovHand",
+        "org.myrobotlab.service.InMoovGestureCreator",
+        "org.myrobotlab.service.InverseKinematics",
+        "org.myrobotlab.service.Roomba",
+        "org.myrobotlab.service.Arm",
+        "org.myrobotlab.service.Plantoid",
+        "org.myrobotlab.service.Sweety",
+        "org.myrobotlab.service.WiiBot"
+      ]
+    },
+    "scheduling": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Clock",
+        "org.myrobotlab.service.Cron"
+      ]
+    },
+    "search": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Solr"
+      ]
+    },
+    "security": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Security"
+      ]
+    },
+    "sensor": {
+      "serviceTypes": [
+        "org.myrobotlab.service.OpenNi",
+        "org.myrobotlab.service.AdafruitIna219",
+        "org.myrobotlab.service.Serial",
+        "org.myrobotlab.service.Ads1115",
+        "org.myrobotlab.service.OpenCV",
+        "org.myrobotlab.service.Tracking",
+        "org.myrobotlab.service.LeapMotion",
+        "org.myrobotlab.service.Mpu6050",
+        "org.myrobotlab.service.MyoThalmic",
+        "org.myrobotlab.service.OculusRift",
+        "org.myrobotlab.service.Pcf8574",
+        "org.myrobotlab.service.Pingdar",
+        "org.myrobotlab.service.UltrasonicSensor",
+        "org.myrobotlab.service.SensorMonitor",
+        "org.myrobotlab.service.Wii",
+        "org.myrobotlab.service.WiiDar",
+        "org.myrobotlab.service.Android",
+        "org.myrobotlab.service.Bno055",
+        "org.myrobotlab.service.Gps",
+        "org.myrobotlab.service.Lidar",
+        "org.myrobotlab.service.OculusDIY",
+        "org.myrobotlab.service.Pir",
+        "org.myrobotlab.service.TopCodes"
+      ]
+    },
+    "servo & pwm": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Adafruit16CServoDriver"
+      ]
+    },
+    "shield": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Adafruit16CServoDriver",
+        "org.myrobotlab.service.AdafruitIna219",
+        "org.myrobotlab.service.AdafruitMotorShield",
+        "org.myrobotlab.service.Ads1115",
+        "org.myrobotlab.service.Pcf8574"
+      ]
+    },
+    "simulation": {
+      "serviceTypes": [
+        "org.myrobotlab.service.SlamBad"
+      ]
+    },
+    "simulator": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Blender"
+      ]
+    },
+    "sound": {
+      "serviceTypes": [
+        "org.myrobotlab.service.AudioFile",
+        "org.myrobotlab.service.AudioCapture",
+        "org.myrobotlab.service.JFugue",
+        "org.myrobotlab.service.MarySpeech"
+      ]
+    },
+    "speech": {
+      "serviceTypes": [
+        "org.myrobotlab.service.AcapelaSpeech",
+        "org.myrobotlab.service.MarySpeech"
+      ]
+    },
+    "speech recognition": {
+      "serviceTypes": [
+        "org.myrobotlab.service.AndroidSpeechRecognition",
+        "org.myrobotlab.service.Sphinx",
+        "org.myrobotlab.service.WebkitSpeechRecognition"
+      ]
+    },
+    "storage": {
+      "serviceTypes": [
+        "org.myrobotlab.service.Database"
+      ]
+    },
+    "testing": {
+      "serviceTypes": [
+        "org.myrobotlab.service.VirtualDevice",
+        "org.myrobotlab.service.Incubator",
+        "org.myrobotlab.service.TestCatcher",
+        "org.myrobotlab.service.TestThrower"
+      ]
+    },
+    "translation": {
+      "serviceTypes": [
+        "org.myrobotlab.service.AzureTranslator"
+      ]
+    },
+    "video": {
+      "serviceTypes": [
+        "org.myrobotlab.service.OpenNi",
+        "org.myrobotlab.service.OpenCV",
+        "org.myrobotlab.service.Tracking",
+        "org.myrobotlab.service.VideoStreamer",
+        "org.myrobotlab.service.IpCamera",
+        "org.myrobotlab.service.OculusRift",
+        "org.myrobotlab.service.GoPro",
+        "org.myrobotlab.service.OculusDIY",
+        "org.myrobotlab.service.TopCodes",
+        "org.myrobotlab.service.Webcam"
+      ]
+    },
+    "vision": {
+      "serviceTypes": [
+        "org.myrobotlab.service.OpenNi",
+        "org.myrobotlab.service.OpenCV",
+        "org.myrobotlab.service.Tracking",
+        "org.myrobotlab.service.GoogleCloud",
+        "org.myrobotlab.service.TopCodes"
+      ]
+    }
+  }
+}

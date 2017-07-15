@@ -1,0 +1,92 @@
+#pragma once
+
+////////   INCLUDE FILES  /////////
+
+#include <Windows.h>
+#include <opencv2\opencv.hpp>
+#include <Kinect.h>
+//#include <Kinect.Face.h>
+#include <string>
+#include <vector>
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <opencv2\face.hpp>
+
+namespace K2OCV {
+
+////// #DEFINES AND TYPEDEFS //////////
+
+typedef DWORD SOURCETYPE;
+
+#define FEATURETYPE SOURCETYPE
+
+#define FRAMETYPE SOURCETYPE
+
+
+///// FOR LOOP //////
+#define FOR02CNT(N) for(auto count = 0 ; count<N ; count++)
+
+#define FORI0(N) for(auto i=0 ; i<N ; i++)
+
+#define FORI2N(I,N) for(auto i=I ; i<N ; i++)
+
+#define FORI(A,N) for(A=0 ; A<N ; A++)
+
+}
+
+
+namespace K2OCV {
+
+	/**************      Available Source Types     ****************/
+	enum SourceTypes {
+		BODY_S = 1,
+		COLOR_S = 2,
+		DEPTH_S = 4,
+		IR_S = 8,
+		LONG_EXPOSURE_IR_S = 16,
+		BODY_INDEX_S = 32,
+		AUDIO_S = 64,
+		FACE_S = 128
+	};
+
+	/*************      Available Face Features     ****************/
+	enum FaceFeatures {
+		//Ignore Warning C4309
+		BOUNDING_BOX_IN_IR_SPACE = 1,
+		POINTS_IN_IR_SPACE = 2,
+		BOUNDING_BOX_IN_COLOR_SAPCE = 4,
+		POINTS_IN_COLOR_SPACE = 8,
+		ROTATION_ORIENTATION = 16,
+		HAPPY = 32,
+		RIGHT_EYE_CLOSED = 64,
+		LEFT_EYE_CLOSED = 128,
+		MOUTH_OPEN = 256,
+		MOUTH_MOVED = 512,
+		LOOKING_AWAY = 1024,
+		GLASSES = 2048,
+		FACE_ENGAGEMENT = 4096
+	};
+
+	/*************        Available Frame Types          ****************/
+	enum FrameType {
+		DEPTH_F = 1,
+		IR_F = 2,
+		COLOR_F = 4,
+		FACE_F = 8,
+		HDFACE_F = 16,
+		BODY_F = 32,
+		BODY_INDEX_F = 64,
+	};
+
+	template<class Interface>
+	inline void SafeRelease(Interface *& pInterfaceToRelease)
+	{
+		if (pInterfaceToRelease != NULL)
+		{
+			pInterfaceToRelease->Release();
+			pInterfaceToRelease = NULL;
+		}
+	}
+
+}

@@ -1,0 +1,23 @@
+{
+  "graphXML": "",
+  "lastTabVisited": "webgui",
+  "welcomeTabText": "Welcome",
+  "isDisplaying": true,
+  "serviceType": {
+    "name": "org.myrobotlab.service.GUIService",
+    "description": "Service used to graphically display and control other services",
+    "ready": false,
+    "available": true,
+    "dependencies": [],
+    "categories": [
+      "display",
+      "location"
+    ],
+    "peers": {}
+  },
+  "name": "gui",
+  "simpleName": "GUIService",
+  "serviceClass": "org.myrobotlab.service.GUIService",
+  "isRunning": false,
+  "allowDisplay": true
+}

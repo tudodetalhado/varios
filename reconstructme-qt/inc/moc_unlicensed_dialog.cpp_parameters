@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+D:/Qt/reconstructme-qt/inc/moc_unlicensed_dialog.cpp
+D:/Qt/reconstructme-qt/inc/unlicensed_dialog.h

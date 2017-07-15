@@ -1,0 +1,83 @@
+#include <sstream>
+#include <stdexcept>
+
+#define NOMINMAX
+
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include <QTimer>
+#include <Kinect.h>
+
+// Point Cloud Library
+#include <pcl/point_cloud.h>
+#include <pcl/point_types.h>
+#include <pcl/visualization/pcl_visualizer.h>
+#include <pcl/visualization/cloud_viewer.h>
+#include <pcl/filters/passthrough.h>
+
+// Visualization Toolkit (VTK)
+#include <vtkRenderWindow.h>
+
+namespace Ui {
+class MainWindow;
+}
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+protected:
+  boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer;
+
+private:
+    Ui::MainWindow *ui;
+
+    // Sensor
+    IKinectSensor *kinect;
+
+    // Coordinate Mapper
+    ICoordinateMapper *coordinateMapper;
+
+    // Reader
+    IColorFrameReader *colorFrameReader;
+    IDepthFrameReader *depthFrameReader;
+
+    // Color Buffer
+    std::vector<BYTE> colorBuffer;
+    int colorWidth;
+    int colorHeight;
+    unsigned int colorBytesPerPixel;
+
+    // Depth Buffer
+    std::vector<UINT16> depthBuffer;
+    int depthWidth;
+    int depthHeight;
+    unsigned int depthBytesPerPixel;
+
+    // PCL
+    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud;
+
+    void initialize();
+    void initializeSensor();
+    void initializeColor();
+    void initializeDepth();
+    void initializePointCloud();
+    void run();
+    void update();
+    void updateColor();
+    void updateDepth();
+    void updatePointCloud();
+    void draw();
+    void drawPointCloud();
+    void showCloud();
+    void showPointCloud();
+    void finalize();
+};
+
+#endif // MAINWINDOW_H

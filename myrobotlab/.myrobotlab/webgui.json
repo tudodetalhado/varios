@@ -1,0 +1,24 @@
+{
+  "port": 8888,
+  "root": "root",
+  "useLocalResources": false,
+  "autoStartBrowser": true,
+  "startURL": "http://localhost:%d",
+  "servicePanels": {},
+  "serviceType": {
+    "name": "org.myrobotlab.service.WebGui",
+    "description": "web display",
+    "ready": false,
+    "available": true,
+    "dependencies": [],
+    "categories": [
+      "display"
+    ],
+    "peers": {}
+  },
+  "name": "webgui",
+  "simpleName": "WebGui",
+  "serviceClass": "org.myrobotlab.service.WebGui",
+  "isRunning": false,
+  "allowDisplay": true
+}

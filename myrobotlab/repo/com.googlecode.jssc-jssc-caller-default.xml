@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="com.googlecode.jssc"
+		module="jssc-caller"
+		revision="working"
+		conf="default"
+		confs="default"
+		date="20170413221349"/>
+	<dependencies>
+		<module organisation="com.googlecode.jssc" name="jssc">
+			<revision name="2.8.0" status="release" pubdate="20170413221347" resolver="public-remote" artresolver="public-remote" downloaded="false" searched="false" default="false" conf="x86.64.windows, runtime" position="0">
+				<metadata-artifact status="no" details="" size="755" time="0" location="D:\Qt\myrobotlab\repo\com.googlecode.jssc\jssc\ivy-2.8.0.xml" searched="false" original-local-location="D:\Qt\myrobotlab\repo\com.googlecode.jssc\jssc\ivy-2.8.0.xml.original" origin-is-local="false" origin-location="https://raw.githubusercontent.com/MyRobotLab/repo/master/com.googlecode.jssc/2.8.0/ivy.xml"/>
+				<caller organisation="com.googlecode.jssc" name="jssc-caller" conf="default" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="working"/>
+				<artifacts>
+					<artifact name="jssc-2.8.0" type="jar" ext="jar" status="no" details="" size="153562" time="0" location="D:\Qt\myrobotlab\repo\com.googlecode.jssc\jssc\jars\jssc-2.8.0-2.8.0.jar">
+						<origin-location is-local="false" location="https://raw.githubusercontent.com/MyRobotLab/repo/master/com.googlecode.jssc/2.8.0/jssc-2.8.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

@@ -1,0 +1,1620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Expt-o Morris</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabViewPrincipal">
+      <property name="baseSize">
+       <size>
+        <width>1024</width>
+        <height>690</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane { /* The tab widget frame */
+    border: 0px solid #C2C7CB;
+}</string>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tabCaptura">
+       <attribute name="title">
+        <string>Captura</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QFrame" name="frmCapturar">
+          <property name="minimumSize">
+           <size>
+            <width>640</width>
+            <height>530</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>913</width>
+            <height>530</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="lblFPS">
+           <property name="geometry">
+            <rect>
+             <x>540</x>
+             <y>489</y>
+             <width>89</width>
+             <height>34</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>FPS 29</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QWidget" name="verticalLayoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>670</x>
+             <y>0</y>
+             <width>243</width>
+             <height>531</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="lblLatencia">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Latência (s)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="displayLatencia">
+              <property name="minimumSize">
+               <size>
+                <width>240</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>240</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Filled</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblDistancia">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Distância (cm)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="displayDistancia">
+              <property name="minimumSize">
+               <size>
+                <width>240</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>240</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <property name="digitCount">
+               <number>5</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Filled</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblVelocidade">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Velocidade (m/s)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="displayVelocidade">
+              <property name="minimumSize">
+               <size>
+                <width>240</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>240</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <property name="smallDecimalPoint">
+               <bool>false</bool>
+              </property>
+              <property name="digitCount">
+               <number>5</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Filled</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblId">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Identificação</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame">
+              <property name="minimumSize">
+               <size>
+                <width>240</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>240</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame {
+    border: 1px solid gray;
+    background-color: white;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <property name="topMargin">
+                <number>12</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QTextEdit" name="txtIdentificacao">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <weight>50</weight>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit {
+    border:  0px;
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="verticalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                 <property name="horizontalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnCapturar">
+              <property name="minimumSize">
+               <size>
+                <width>240</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>240</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Capturar</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chkGravar">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Gravar vídeo</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="ArenaView" name="viewCaptura">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>640</width>
+             <height>530</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>640</width>
+             <height>530</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>640</width>
+             <height>530</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>640</width>
+             <height>530</height>
+            </size>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <zorder>viewCaptura</zorder>
+          <zorder>lblFPS</zorder>
+          <zorder>verticalLayoutWidget_3</zorder>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabArena">
+       <attribute name="title">
+        <string>Arena</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="QFrame" name="frmCapturar_2">
+          <property name="minimumSize">
+           <size>
+            <width>640</width>
+            <height>530</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>913</width>
+            <height>530</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="lblFPS_2">
+           <property name="geometry">
+            <rect>
+             <x>540</x>
+             <y>489</y>
+             <width>89</width>
+             <height>34</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>FPS 29</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="geometry">
+            <rect>
+             <x>673</x>
+             <y>298</y>
+             <width>196</width>
+             <height>176</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="title">
+            <string>Quadrante</string>
+           </property>
+           <widget class="QRadioButton" name="rdbNO">
+            <property name="geometry">
+             <rect>
+              <x>65</x>
+              <y>70</y>
+              <width>18</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="rdbNE">
+            <property name="geometry">
+             <rect>
+              <x>112</x>
+              <y>70</y>
+              <width>18</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="rdbSO">
+            <property name="geometry">
+             <rect>
+              <x>64</x>
+              <y>107</y>
+              <width>18</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="rdbSE">
+            <property name="geometry">
+             <rect>
+              <x>111</x>
+              <y>108</y>
+              <width>18</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="Line" name="line">
+            <property name="geometry">
+             <rect>
+              <x>90</x>
+              <y>50</y>
+              <width>16</width>
+              <height>105</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_2">
+            <property name="geometry">
+             <rect>
+              <x>41</x>
+              <y>90</y>
+              <width>126</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lblFPSIR_15">
+            <property name="geometry">
+             <rect>
+              <x>63</x>
+              <y>45</y>
+              <width>23</width>
+              <height>27</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>NO</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lblFPSIR_16">
+            <property name="geometry">
+             <rect>
+              <x>111</x>
+              <y>45</y>
+              <width>23</width>
+              <height>27</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>NE</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lblFPSIR_17">
+            <property name="geometry">
+             <rect>
+              <x>62</x>
+              <y>119</y>
+              <width>23</width>
+              <height>27</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>SO</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lblFPSIR_18">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>119</y>
+              <width>23</width>
+              <height>27</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>SE</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QLabel" name="lblFPSIR_9">
+           <property name="geometry">
+            <rect>
+             <x>681</x>
+             <y>52</y>
+             <width>64</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Diâmetro</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderCirculoY">
+           <property name="geometry">
+            <rect>
+             <x>679</x>
+             <y>217</y>
+             <width>194</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>424</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="pageStep">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>208</number>
+           </property>
+           <property name="sliderPosition">
+            <number>208</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderCirculoPlay">
+           <property name="geometry">
+            <rect>
+             <x>681</x>
+             <y>89</y>
+             <width>189</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>100</number>
+           </property>
+           <property name="maximum">
+            <number>212</number>
+           </property>
+           <property name="value">
+            <number>180</number>
+           </property>
+           <property name="sliderPosition">
+            <number>180</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderCirculoX">
+           <property name="geometry">
+            <rect>
+             <x>681</x>
+             <y>154</y>
+             <width>190</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>512</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="pageStep">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>250</number>
+           </property>
+           <property name="sliderPosition">
+            <number>250</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lblFPSIR_11">
+           <property name="geometry">
+            <rect>
+             <x>680</x>
+             <y>119</y>
+             <width>64</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Eixo X</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lblFPSIR_14">
+           <property name="geometry">
+            <rect>
+             <x>680</x>
+             <y>181</y>
+             <width>64</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Eixo Y</string>
+           </property>
+          </widget>
+          <widget class="ArenaView" name="viewArena">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>640</width>
+             <height>530</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>640</width>
+             <height>530</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>640</width>
+             <height>530</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>640</width>
+             <height>530</height>
+            </size>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QWidget" name="horizontalLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>9</x>
+             <y>9</y>
+             <width>47</width>
+             <height>149</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QPushButton" name="btnSelecionar">
+              <property name="minimumSize">
+               <size>
+                <width>45</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>45</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton:checked
+{
+   background-color: gray;
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="Morris.qrc">
+                <normaloff>:/icons/select.png</normaloff>:/icons/select.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnArena">
+              <property name="minimumSize">
+               <size>
+                <width>45</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>45</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton:checked
+{
+   background-color: gray;
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="Morris.qrc">
+                <normaloff>:/icons/arena.png</normaloff>:/icons/arena.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>36</width>
+                <height>36</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnPlataforma">
+              <property name="minimumSize">
+               <size>
+                <width>45</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>45</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton:checked
+{
+   background-color: gray;
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="Morris.qrc">
+                <normaloff>:/icons/plataforma.png</normaloff>:/icons/plataforma.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QPushButton" name="btnSalvarArena">
+           <property name="geometry">
+            <rect>
+             <x>673</x>
+             <y>477</y>
+             <width>164</width>
+             <height>49</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Salvar</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabDeteccao">
+       <attribute name="title">
+        <string>Detecção</string>
+       </attribute>
+       <widget class="QLabel" name="lblPrimeira">
+        <property name="geometry">
+         <rect>
+          <x>63</x>
+          <y>26</y>
+          <width>43</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Matiz</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lblSegunda">
+        <property name="geometry">
+         <rect>
+          <x>385</x>
+          <y>26</y>
+          <width>66</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Saturação</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lblTerceira">
+        <property name="geometry">
+         <rect>
+          <x>716</x>
+          <y>27</y>
+          <width>43</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Brilho</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>59</x>
+          <y>280</y>
+          <width>253</width>
+          <height>227</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="layFiltrosHSV"/>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>716</x>
+          <y>281</y>
+          <width>253</width>
+          <height>221</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="layFiltrosRGB"/>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>57</x>
+          <y>516</y>
+          <width>254</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="layFiltrosContraste"/>
+       </widget>
+       <widget class="ArenaView" name="vPrimeira">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>49</y>
+          <width>256</width>
+          <height>212</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>256</width>
+          <height>212</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>256</width>
+          <height>212</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>640</width>
+          <height>530</height>
+         </size>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+       </widget>
+       <widget class="ArenaView" name="vSegunda">
+        <property name="geometry">
+         <rect>
+          <x>383</x>
+          <y>50</y>
+          <width>256</width>
+          <height>212</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>256</width>
+          <height>212</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>256</width>
+          <height>212</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>640</width>
+          <height>530</height>
+         </size>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+       </widget>
+       <widget class="ArenaView" name="vTerceira">
+        <property name="geometry">
+         <rect>
+          <x>709</x>
+          <y>47</y>
+          <width>256</width>
+          <height>212</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>256</width>
+          <height>212</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>256</width>
+          <height>212</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>640</width>
+          <height>530</height>
+         </size>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tabHistorico">
+       <attribute name="title">
+        <string>Histórico</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QFrame" name="frmHistorico">
+          <property name="minimumSize">
+           <size>
+            <width>640</width>
+            <height>530</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>913</width>
+            <height>530</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QTableView" name="tableView">
+           <property name="geometry">
+            <rect>
+             <x>652</x>
+             <y>5</y>
+             <width>188</width>
+             <height>361</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabConfig">
+       <attribute name="title">
+        <string>Configurações</string>
+       </attribute>
+       <widget class="QCheckBox" name="chkInvertido">
+        <property name="geometry">
+         <rect>
+          <x>264</x>
+          <y>53</y>
+          <width>183</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Contraste invertido</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="chkInvertido_2">
+        <property name="geometry">
+         <rect>
+          <x>264</x>
+          <y>83</y>
+          <width>284</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Mostrar vídeo em cores na aquisição</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="chkInvertido_3">
+        <property name="geometry">
+         <rect>
+          <x>264</x>
+          <y>113</y>
+          <width>282</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Exibir histórico de testes anterirores</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="chkTrack">
+        <property name="geometry">
+         <rect>
+          <x>264</x>
+          <y>140</y>
+          <width>221</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Quantificar na gravação</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="chkPararAuto">
+        <property name="geometry">
+         <rect>
+          <x>621</x>
+          <y>32</y>
+          <width>221</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Capturar automaticamente</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="grpFormato">
+        <property name="geometry">
+         <rect>
+          <x>273</x>
+          <y>189</y>
+          <width>221</width>
+          <height>200</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="title">
+         <string>Formato</string>
+        </property>
+        <widget class="QRadioButton" name="rdb2Dinfra">
+         <property name="geometry">
+          <rect>
+           <x>26</x>
+           <y>74</y>
+           <width>84</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>2D (IR)</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rdb3Dcinza">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>111</y>
+           <width>102</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>3D (cinza)</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rdb2Dcinza">
+         <property name="geometry">
+          <rect>
+           <x>26</x>
+           <y>36</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>2D (cor)</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QTimeEdit" name="cboTimerPlay">
+        <property name="geometry">
+         <rect>
+          <x>749</x>
+          <y>96</y>
+          <width>85</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="displayFormat">
+         <string>mm:ss</string>
+        </property>
+        <property name="time">
+         <time>
+          <hour>0</hour>
+          <minute>2</minute>
+          <second>0</second>
+         </time>
+        </property>
+       </widget>
+       <widget class="QTimeEdit" name="cboTimerLimite">
+        <property name="geometry">
+         <rect>
+          <x>639</x>
+          <y>97</y>
+          <width>86</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="displayFormat">
+         <string>mm:ss</string>
+        </property>
+        <property name="time">
+         <time>
+          <hour>0</hour>
+          <minute>0</minute>
+          <second>3</second>
+         </time>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>638</x>
+          <y>61</y>
+          <width>172</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Limite inicial e duração</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>101</x>
+          <y>454</y>
+          <width>853</width>
+          <height>53</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Definir 2. Contour Area e 4. Contour Approximation, evitar erro</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>98</x>
+          <y>405</y>
+          <width>169</width>
+          <height>53</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>24</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Usar m/s</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>497</y>
+          <width>829</width>
+          <height>53</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>http://docs.opencv.org/trunk/dd/d49/tutorial_py_contour_features.html</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>96</x>
+          <y>587</y>
+          <width>829</width>
+          <height>53</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>http://www.mathworks.com/help/images/ref/regionprops.html</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>99</x>
+          <y>554</y>
+          <width>169</width>
+          <height>53</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>24</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Orientation</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ArenaView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">ArenaView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Morris.qrc"/>
+ </resources>
+ <connections/>
+</ui>
